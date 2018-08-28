@@ -36,15 +36,15 @@ module.exports = (app) => {
 
     // VALIDATION
     if (!owner || !name) {
-      res.status(400).send('owner or name invalid.');
+      res.status(400).json({ error: 'owner or name invalid.' });
       return;
     } if (repositoryFound) {
-      res.status(400).send('repository already added.');
+      res.status(400).json({ error: 'repository already added.' });
       return;
     }
 
     req.session.repositories = [...repositories, { owner, name }];
-    res.send('repository saved successfully.');
+    res.json({ message: 'repository saved successfully.' });
   });
 
   /** Removes a repository from the session. */

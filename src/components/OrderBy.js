@@ -1,57 +1,47 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import RepositoryContext from '../contexts/RepositoryContext'
 
 const options = [{
   name: 'Name ASC',
   value: 'NAME_ASC',
+  sort: (a, b) => a.nameWithOwner > b.nameWithOwner,
 }, {
   name: 'Name DESC',
   value: 'NAME_DESC',
+  sort: (a, b) => a.nameWithOwner < b.nameWithOwner,
 }, {
   name: 'Issues ASC',
   value: 'ISSUES_ASC',
+  sort: (a, b) => a.issues.totalCount > b.issues.totalCount,
 }, {
   name: 'Issues DESC',
   value: 'ISSUES_DESC',
+  sort: (a, b) => a.issues.totalCount < b.issues.totalCount,
 }, {
   name: "PR's ASC",
   value: 'PRS_ASC',
+  sort: (a, b) => a.pullRequests.totalCount > b.pullRequests.totalCount,
 }, {
   name: "PR's DESC",
   value: 'PRS_DESC',
+  sort: (a, b) => a.pullRequests.totalCount < b.pullRequests.totalCount,
 }]
 
-export default class OrderBy extends Component {
+class OrderBy extends Component {
   static propTypes = {
     repositories: PropTypes.arrayOf(PropTypes.object),
-    setRepositories: PropTypes.func,
+    originalRepositories: PropTypes.arrayOf(PropTypes.object),
+    updateRepositories: PropTypes.func,
   }
 
   doOrdenation = (opt) => {
     const repositories = [...this.props.repositories]
-    switch (opt) {
-      case 'NAME_ASC':
-        repositories.sort((a, b) => a.nameWithOwner > b.nameWithOwner)
-        break
-      case 'NAME_DESC':
-        repositories.sort((a, b) => a.nameWithOwner < b.nameWithOwner)
-        break
-      case 'ISSUES_ASC':
-        repositories.sort((a, b) => a.issues.totalCount > b.issues.totalCount)
-        break
-      case 'ISSUES_DESC':
-        repositories.sort((a, b) => a.issues.totalCount < b.issues.totalCount)
-        break
-      case 'PRS_ASC':
-        repositories.sort((a, b) => a.pullRequests.totalCount > b.pullRequests.totalCount)
-        break
-      case 'PRS_DESC':
-        repositories.sort((a, b) => a.pullRequests.totalCount < b.pullRequests.totalCount)
-        break
-      default:
-        break
-    }
-    this.props.setRepositories(repositories)
+    const originalRepositories = [...this.props.originalRepositories]
+    const selectedOption = options.find(option => option.value === opt)
+    repositories.sort(selectedOption.sort)
+    originalRepositories.sort(selectedOption.sort)
+    this.props.updateRepositories(repositories, originalRepositories)
   }
 
   render() {
@@ -71,3 +61,19 @@ export default class OrderBy extends Component {
     )
   }
 }
+
+export default function ComponentWithContext(props) {
+  return (
+    <RepositoryContext.Consumer>
+      {({ repositories, originalRepositories, updateRepositories }) => (
+        <OrderBy
+          {...props}
+          repositories={repositories}
+          updateRepositories={updateRepositories}
+          originalRepositories={originalRepositories}
+        />
+      )}
+    </RepositoryContext.Consumer>
+  )
+}
+

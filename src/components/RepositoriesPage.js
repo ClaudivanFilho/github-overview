@@ -3,44 +3,43 @@ import PropTypes from 'prop-types'
 import Repository from './Repository'
 import OrderBy from './OrderBy'
 import Search from './Search'
+import AddRepository from './AddRepository'
+import RepositoryContext from '../contexts/RepositoryContext'
 
-export default class RepositoriesPage extends Component {
-  state = {
-    repositories: null,
-  }
-
+class RepositoriesPage extends Component {
   static propTypes = {
     repositories: PropTypes.arrayOf(PropTypes.object),
-  }
-
-  setRepositories = (repositories) => {
-    this.setState({ repositories })
+    openToast: PropTypes.func,
   }
 
   render() {
-    const reps = this.state.repositories || this.props.repositories
     return (
       <div className="flex flex-column w-100 pa3 sans-serif">
-        <div className="w-100 pb2">
-          <div className="fl">
-            <Search
-              setRepositories={this.setRepositories}
-              repositories={this.props.repositories}
-            />
+        <div className="w-100 flex pb2">
+          <div className="w-33 flex">
+            <AddRepository />
           </div>
-          <div className="fr">
-            <OrderBy
-              setRepositories={this.setRepositories}
-              repositories={reps}
-            />
+          <div className="w-33 flex justify-center">
+            <Search />
+          </div>
+          <div className="w-33 flex justify-end">
+            <OrderBy />
           </div>
         </div>
         <div className="w-100">
-          {reps.map(rep => (
+          {this.props.repositories.map(rep => (
             <Repository key={rep.id} repository={rep} />
           ))}
         </div>
       </div>
     )
   }
+}
+
+export default function RepositoriesPageWithContext(props) {
+  return (
+    <RepositoryContext.Consumer>
+      {({ repositories }) => <RepositoriesPage {...props} repositories={repositories} />}
+    </RepositoryContext.Consumer>
+  )
 }

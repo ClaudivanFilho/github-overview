@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import RepositoryContext from '../contexts/RepositoryContext'
 
-export default class Search extends Component {
+class Search extends Component {
   static propTypes = {
-    repositories: PropTypes.arrayOf(PropTypes.object),
-    setRepositories: PropTypes.func,
+    originalRepositories: PropTypes.arrayOf(PropTypes.object),
+    updateRepositories: PropTypes.func,
   }
 
   doSearch = (text) => {
-    this.props.setRepositories(this.props.repositories.filter(rep => (
+    this.props.updateRepositories(this.props.originalRepositories.filter(rep => (
       rep.nameWithOwner.toLowerCase().includes(text.toLowerCase())
     )))
   }
@@ -27,4 +28,18 @@ export default class Search extends Component {
       </div>
     )
   }
+}
+
+export default function ComponentWithContext(props) {
+  return (
+    <RepositoryContext.Consumer>
+      {({ originalRepositories, updateRepositories }) => (
+        <Search
+          {...props}
+          originalRepositories={originalRepositories}
+          updateRepositories={updateRepositories}
+        />
+      )}
+    </RepositoryContext.Consumer>
+  )
 }

@@ -1,15 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Collapse } from 'react-collapse'
 import PropTypes from 'prop-types'
+import ToastContext from '../contexts/ToastContext'
 
-export default class Repository extends Component {
+class Repository extends Component {
   static propTypes = {
     repository: PropTypes.shape({
       description: PropTypes.string,
+      nameWithOwner: PropTypes.string,
       collaborators: PropTypes.shape({
         nodes: PropTypes.arrayOf(PropTypes.object),
       }),
     }),
+    openToast: PropTypes.func,
   }
 
   state = {
@@ -22,13 +25,40 @@ export default class Repository extends Component {
     })
   }
 
+  handleRemove = () => {
+    const [owner, name] = this.props.repository.nameWithOwner.split('/')
+    fetch('/api/repository', {
+      method: 'DELETE',
+      body: JSON.stringify({ owner, name }),
+    })
+      .then(() => this.props.openToast('Repository Removed!'))
+      .catch(res => this.props.openToast(res.error, true))
+  }
+
   render() {
     const { repository, repository: { collaborators } } = this.props
-    console.log(repository)
     return (
       <div className="near-black ba bw1 b--black-20 br2 mb1">
-        <div className="bg-near-white pointer pa2 fw6" onClick={this.handleCollapseClick}>
-          {repository.nameWithOwner}
+        <div className="bg-near-white pointer pa2 fw6 flex justify-between items-center" onClick={this.handleCollapseClick}>
+          <a href={repository.url}>
+            {repository.nameWithOwner}
+          </a>
+          {
+            !this.state.open && (
+              <Fragment>
+                <label className="f6 b db mr2">
+                  Issues ({repository.issues.totalCount})
+                </label>
+                <label className="f6 b db mr2">
+                  Pull Requests ({repository.pullRequests.totalCount})
+                </label>
+                <label className="f6 b db mr2">
+                  Active Branches ({repository.refs.totalCount})
+                </label>
+              </Fragment>
+            )
+          }
+          <span className="f3 red" onClick={this.handleRemove}>x</span>
         </div>
         <Collapse isOpened={this.state.open} springConfig={{ stiffness: 100, damping: 20 }}>
           <div className="flex">
@@ -61,14 +91,14 @@ export default class Repository extends Component {
               </div>
               <div className="w-100 flex">
                 <div className="w-30 flex flex-column">
-                  <h5 className="mv2">Active Branches</h5>
+                  <h5 className="mv2">Active Branches ({repository.refs.totalCount})</h5>
                 </div>
                 <div className="w-70 flex flex-column">
-                  <h5 className="mv2">PRS</h5>
+                  <h5 className="mv2">PRS ({repository.pullRequests.totalCount})</h5>
                 </div>
               </div>
               <div className="flex flex-column">
-                <h5 className="mv2">Issues</h5>
+                <h5 className="mv2">Issues ({repository.issues.totalCount})</h5>
               </div>
             </div>
           </div>
@@ -76,4 +106,12 @@ export default class Repository extends Component {
       </div>
     )
   }
+}
+
+export default function RepositoryWithContext(props) {
+  return (
+    <ToastContext.Consumer>
+      {({ openToast }) => <Repository {...props} openToast={openToast} />}
+    </ToastContext.Consumer>
+  )
 }
