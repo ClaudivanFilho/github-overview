@@ -1,0 +1,20 @@
+.go-side-bar {
+  width: 220px;
+  background-color: #1A2225;
+}
+
+input {
+  border: 1px solid #ccc;
+  height: 34px;
+}
+
+select {
+  width: 150px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-128.png) 96% / 15% no-repeat #eee;
+}
