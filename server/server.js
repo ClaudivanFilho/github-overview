@@ -6,8 +6,9 @@ const app = express();
 const session = require('express-session');
 
 const isProduction = process.env.NODE_ENV === 'production';
+const port = process.env.PORT || 8080;
 
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, '../build')));
 if (isProduction) {
   app.set('trust proxy', 1);
 }
@@ -23,5 +24,5 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 require('./routes')(app);
 
-app.listen(process.env.PORT || 8080);
-console.log('Server started in the address localhost:8080');
+app.listen(port);
+console.log(`Server started in the port ${port}`);

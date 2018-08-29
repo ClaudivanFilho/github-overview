@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "server": "nodemon -r dotenv/config server.js"
+    "server": "nodemon -r dotenv/config server/server.js"
   },
   "devDependencies": {
     "enzyme": "^3.5.0",
