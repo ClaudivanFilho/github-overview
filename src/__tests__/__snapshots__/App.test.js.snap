@@ -75,21 +75,25 @@ exports[`Test App component Renders correctly 1`] = `
       exact={true}
       path="/"
     >
-      <HomePage>
-        <div
-          className="w-100 flex flex-column"
+      <RepositoriesPageWithContext>
+        <HomePage
+          repositories={Array []}
         >
           <div
-            className="w-100"
+            className="w-100 flex flex-column"
           >
-            <h3
-              className="mv2"
+            <div
+              className="w-100"
             >
-              Your Pendencies
-            </h3>
+              <h3
+                className="mv2"
+              >
+                Your Pendencies
+              </h3>
+            </div>
           </div>
-        </div>
-      </HomePage>
+        </HomePage>
+      </RepositoriesPageWithContext>
     </Route>
     <Route
       component={[Function]}

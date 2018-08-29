@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import RepositoryContext from '../contexts/RepositoryContext'
 
-export default class HomePage extends Component {
+class HomePage extends Component {
   render() {
     return (
       <div className="w-100 flex flex-column">
@@ -10,4 +11,12 @@ export default class HomePage extends Component {
       </div>
     )
   }
+}
+
+export default function RepositoriesPageWithContext(props) {
+  return (
+    <RepositoryContext.Consumer>
+      {({ repositories }) => <HomePage repositories={repositories} {...props} />}
+    </RepositoryContext.Consumer>
+  )
 }

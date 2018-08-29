@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test OrderBy component Renders correctly 1`] = `
+<ComponentWithContext>
+  <OrderBy
+    originalRepositories={Array []}
+    repositories={Array []}
+    updateRepositories={[Function]}
+  >
+    <div
+      className="flex items-center"
+    >
+      <select
+        className="pl2 bg-white br2 pointer"
+        id="orderBy"
+        onChange={[Function]}
+      >
+        <option
+          key="NAME_ASC"
+          value="NAME_ASC"
+        >
+          Name ASC
+        </option>
+        <option
+          key="NAME_DESC"
+          value="NAME_DESC"
+        >
+          Name DESC
+        </option>
+        <option
+          key="ISSUES_ASC"
+          value="ISSUES_ASC"
+        >
+          Issues ASC
+        </option>
+        <option
+          key="ISSUES_DESC"
+          value="ISSUES_DESC"
+        >
+          Issues DESC
+        </option>
+        <option
+          key="PRS_ASC"
+          value="PRS_ASC"
+        >
+          PR's ASC
+        </option>
+        <option
+          key="PRS_DESC"
+          value="PRS_DESC"
+        >
+          PR's DESC
+        </option>
+      </select>
+    </div>
+  </OrderBy>
+</ComponentWithContext>
+`;

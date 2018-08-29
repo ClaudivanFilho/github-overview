@@ -1,0 +1,1096 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Repository component Renders correctly 1`] = `
+<RepositoryWithContext
+  repository={
+    Object {
+      "collaborators": Object {
+        "nodes": Array [
+          Object {
+            "avatarUrl": "https://avatars3.githubusercontent.com/u/10401309?v=4",
+            "name": "Raphael Simoens",
+            "url": "https://github.com/rsimoens",
+          },
+          Object {
+            "avatarUrl": "https://avatars3.githubusercontent.com/u/12852518?v=4",
+            "name": "Vitória Heliane",
+            "url": "https://github.com/vitoriaHeliane",
+          },
+          Object {
+            "avatarUrl": "https://avatars1.githubusercontent.com/u/13875462?v=4",
+            "name": "Leonardo Padilha",
+            "url": "https://github.com/lcfpadilha",
+          },
+          Object {
+            "avatarUrl": "https://avatars2.githubusercontent.com/u/14097431?v=4",
+            "name": "Mark Matern",
+            "url": "https://github.com/mrkmat",
+          },
+          Object {
+            "avatarUrl": "https://avatars1.githubusercontent.com/u/15784157?v=4",
+            "name": "Juliane Lopes Ferreira",
+            "url": "https://github.com/julopesferr",
+          },
+          Object {
+            "avatarUrl": "https://avatars2.githubusercontent.com/u/15948386?v=4",
+            "name": "Estácio Pereira",
+            "url": "https://github.com/estacioneto",
+          },
+          Object {
+            "avatarUrl": "https://avatars3.githubusercontent.com/u/18706156?v=4",
+            "name": "Luciano de Oliveira Júnior",
+            "url": "https://github.com/luciannojunior",
+          },
+          Object {
+            "avatarUrl": "https://avatars2.githubusercontent.com/u/21203990?v=4",
+            "name": null,
+            "url": "https://github.com/gabrielgalc",
+          },
+          Object {
+            "avatarUrl": "https://avatars0.githubusercontent.com/u/23402009?v=4",
+            "name": null,
+            "url": "https://github.com/lowbeer",
+          },
+          Object {
+            "avatarUrl": "https://avatars0.githubusercontent.com/u/30424413?v=4",
+            "name": null,
+            "url": "https://github.com/luizerasmo",
+          },
+          Object {
+            "avatarUrl": "https://avatars0.githubusercontent.com/u/31371069?v=4",
+            "name": "Ian Duleba",
+            "url": "https://github.com/iduleba",
+          },
+        ],
+        "totalCount": 55,
+      },
+      "createdAt": "2018-04-11T20:23:43Z",
+      "description": "VTEX Minicart app ",
+      "id": "MDEwOlJlcG9zaXRvcnkxMjkxNDk3Nzk=",
+      "issues": Object {
+        "nodes": Array [],
+        "totalCount": 0,
+      },
+      "nameWithOwner": "vtex-apps/minicart",
+      "pullRequests": Object {
+        "nodes": Array [
+          Object {
+            "assignees": Object {
+              "nodes": Array [
+                Object {
+                  "avatarUrl": "https://avatars3.githubusercontent.com/u/12852518?v=4",
+                  "name": "Vitória Heliane",
+                },
+              ],
+            },
+            "reviews": Object {
+              "nodes": Array [
+                Object {
+                  "author": Object {
+                    "avatarUrl": "https://avatars2.githubusercontent.com/u/4960686?v=4",
+                    "login": "ClaudivanFilho",
+                  },
+                  "state": "CHANGES_REQUESTED",
+                },
+                Object {
+                  "author": Object {
+                    "avatarUrl": "https://avatars1.githubusercontent.com/u/3926634?v=4",
+                    "login": "salesfelipe",
+                  },
+                  "state": "APPROVED",
+                },
+                Object {
+                  "author": Object {
+                    "avatarUrl": "https://avatars2.githubusercontent.com/u/4960686?v=4",
+                    "login": "ClaudivanFilho",
+                  },
+                  "state": "CHANGES_REQUESTED",
+                },
+                Object {
+                  "author": Object {
+                    "avatarUrl": "https://avatars2.githubusercontent.com/u/4960686?v=4",
+                    "login": "ClaudivanFilho",
+                  },
+                  "state": "APPROVED",
+                },
+              ],
+            },
+            "title": "Update the Quantity Selector UI and Fix change quantity",
+            "url": "https://github.com/vtex-apps/minicart/pull/37",
+          },
+        ],
+        "totalCount": 1,
+      },
+      "refs": Object {
+        "nodes": Array [
+          Object {
+            "name": "bugfix/grapqlerror",
+            "target": Object {
+              "history": Object {
+                "edges": Array [
+                  Object {
+                    "node": Object {
+                      "author": Object {
+                        "avatarUrl": "https://avatars1.githubusercontent.com/u/3926634?v=4",
+                        "name": "Felipe Sales",
+                      },
+                      "committedDate": "2018-05-12T18:58:01Z",
+                    },
+                  },
+                ],
+              },
+            },
+          },
+          Object {
+            "name": "fix/duplicate-product",
+            "target": Object {
+              "history": Object {
+                "edges": Array [
+                  Object {
+                    "node": Object {
+                      "author": Object {
+                        "avatarUrl": "https://avatars3.githubusercontent.com/u/10223856?v=4",
+                        "name": "Lucas Cordeiro",
+                      },
+                      "committedDate": "2018-07-03T14:20:39Z",
+                    },
+                  },
+                ],
+              },
+            },
+          },
+          Object {
+            "name": "master",
+            "target": Object {
+              "history": Object {
+                "edges": Array [
+                  Object {
+                    "node": Object {
+                      "author": Object {
+                        "avatarUrl": "https://avatars0.githubusercontent.com/u/8000984?v=4",
+                        "name": "Bruno Dias",
+                      },
+                      "committedDate": "2018-08-24T15:01:26Z",
+                    },
+                  },
+                ],
+              },
+            },
+          },
+          Object {
+            "name": "update/quantity-selector",
+            "target": Object {
+              "history": Object {
+                "edges": Array [
+                  Object {
+                    "node": Object {
+                      "author": Object {
+                        "avatarUrl": "https://avatars3.githubusercontent.com/u/12852518?v=4",
+                        "name": "Vitória Heliane",
+                      },
+                      "committedDate": "2018-08-29T12:46:12Z",
+                    },
+                  },
+                ],
+              },
+            },
+          },
+        ],
+        "totalCount": 4,
+      },
+      "stargazers": Object {
+        "totalCount": 2,
+      },
+      "url": "https://github.com/vtex-apps/minicart",
+    }
+  }
+>
+  <Repository
+    openToast={[Function]}
+    repository={
+      Object {
+        "collaborators": Object {
+          "nodes": Array [
+            Object {
+              "avatarUrl": "https://avatars3.githubusercontent.com/u/10401309?v=4",
+              "name": "Raphael Simoens",
+              "url": "https://github.com/rsimoens",
+            },
+            Object {
+              "avatarUrl": "https://avatars3.githubusercontent.com/u/12852518?v=4",
+              "name": "Vitória Heliane",
+              "url": "https://github.com/vitoriaHeliane",
+            },
+            Object {
+              "avatarUrl": "https://avatars1.githubusercontent.com/u/13875462?v=4",
+              "name": "Leonardo Padilha",
+              "url": "https://github.com/lcfpadilha",
+            },
+            Object {
+              "avatarUrl": "https://avatars2.githubusercontent.com/u/14097431?v=4",
+              "name": "Mark Matern",
+              "url": "https://github.com/mrkmat",
+            },
+            Object {
+              "avatarUrl": "https://avatars1.githubusercontent.com/u/15784157?v=4",
+              "name": "Juliane Lopes Ferreira",
+              "url": "https://github.com/julopesferr",
+            },
+            Object {
+              "avatarUrl": "https://avatars2.githubusercontent.com/u/15948386?v=4",
+              "name": "Estácio Pereira",
+              "url": "https://github.com/estacioneto",
+            },
+            Object {
+              "avatarUrl": "https://avatars3.githubusercontent.com/u/18706156?v=4",
+              "name": "Luciano de Oliveira Júnior",
+              "url": "https://github.com/luciannojunior",
+            },
+            Object {
+              "avatarUrl": "https://avatars2.githubusercontent.com/u/21203990?v=4",
+              "name": null,
+              "url": "https://github.com/gabrielgalc",
+            },
+            Object {
+              "avatarUrl": "https://avatars0.githubusercontent.com/u/23402009?v=4",
+              "name": null,
+              "url": "https://github.com/lowbeer",
+            },
+            Object {
+              "avatarUrl": "https://avatars0.githubusercontent.com/u/30424413?v=4",
+              "name": null,
+              "url": "https://github.com/luizerasmo",
+            },
+            Object {
+              "avatarUrl": "https://avatars0.githubusercontent.com/u/31371069?v=4",
+              "name": "Ian Duleba",
+              "url": "https://github.com/iduleba",
+            },
+          ],
+          "totalCount": 55,
+        },
+        "createdAt": "2018-04-11T20:23:43Z",
+        "description": "VTEX Minicart app ",
+        "id": "MDEwOlJlcG9zaXRvcnkxMjkxNDk3Nzk=",
+        "issues": Object {
+          "nodes": Array [],
+          "totalCount": 0,
+        },
+        "nameWithOwner": "vtex-apps/minicart",
+        "pullRequests": Object {
+          "nodes": Array [
+            Object {
+              "assignees": Object {
+                "nodes": Array [
+                  Object {
+                    "avatarUrl": "https://avatars3.githubusercontent.com/u/12852518?v=4",
+                    "name": "Vitória Heliane",
+                  },
+                ],
+              },
+              "reviews": Object {
+                "nodes": Array [
+                  Object {
+                    "author": Object {
+                      "avatarUrl": "https://avatars2.githubusercontent.com/u/4960686?v=4",
+                      "login": "ClaudivanFilho",
+                    },
+                    "state": "CHANGES_REQUESTED",
+                  },
+                  Object {
+                    "author": Object {
+                      "avatarUrl": "https://avatars1.githubusercontent.com/u/3926634?v=4",
+                      "login": "salesfelipe",
+                    },
+                    "state": "APPROVED",
+                  },
+                  Object {
+                    "author": Object {
+                      "avatarUrl": "https://avatars2.githubusercontent.com/u/4960686?v=4",
+                      "login": "ClaudivanFilho",
+                    },
+                    "state": "CHANGES_REQUESTED",
+                  },
+                  Object {
+                    "author": Object {
+                      "avatarUrl": "https://avatars2.githubusercontent.com/u/4960686?v=4",
+                      "login": "ClaudivanFilho",
+                    },
+                    "state": "APPROVED",
+                  },
+                ],
+              },
+              "title": "Update the Quantity Selector UI and Fix change quantity",
+              "url": "https://github.com/vtex-apps/minicart/pull/37",
+            },
+          ],
+          "totalCount": 1,
+        },
+        "refs": Object {
+          "nodes": Array [
+            Object {
+              "name": "bugfix/grapqlerror",
+              "target": Object {
+                "history": Object {
+                  "edges": Array [
+                    Object {
+                      "node": Object {
+                        "author": Object {
+                          "avatarUrl": "https://avatars1.githubusercontent.com/u/3926634?v=4",
+                          "name": "Felipe Sales",
+                        },
+                        "committedDate": "2018-05-12T18:58:01Z",
+                      },
+                    },
+                  ],
+                },
+              },
+            },
+            Object {
+              "name": "fix/duplicate-product",
+              "target": Object {
+                "history": Object {
+                  "edges": Array [
+                    Object {
+                      "node": Object {
+                        "author": Object {
+                          "avatarUrl": "https://avatars3.githubusercontent.com/u/10223856?v=4",
+                          "name": "Lucas Cordeiro",
+                        },
+                        "committedDate": "2018-07-03T14:20:39Z",
+                      },
+                    },
+                  ],
+                },
+              },
+            },
+            Object {
+              "name": "master",
+              "target": Object {
+                "history": Object {
+                  "edges": Array [
+                    Object {
+                      "node": Object {
+                        "author": Object {
+                          "avatarUrl": "https://avatars0.githubusercontent.com/u/8000984?v=4",
+                          "name": "Bruno Dias",
+                        },
+                        "committedDate": "2018-08-24T15:01:26Z",
+                      },
+                    },
+                  ],
+                },
+              },
+            },
+            Object {
+              "name": "update/quantity-selector",
+              "target": Object {
+                "history": Object {
+                  "edges": Array [
+                    Object {
+                      "node": Object {
+                        "author": Object {
+                          "avatarUrl": "https://avatars3.githubusercontent.com/u/12852518?v=4",
+                          "name": "Vitória Heliane",
+                        },
+                        "committedDate": "2018-08-29T12:46:12Z",
+                      },
+                    },
+                  ],
+                },
+              },
+            },
+          ],
+          "totalCount": 4,
+        },
+        "stargazers": Object {
+          "totalCount": 2,
+        },
+        "url": "https://github.com/vtex-apps/minicart",
+      }
+    }
+  >
+    <div
+      className="near-black ba bw1 b--black-20 br2 mb1"
+    >
+      <div
+        className="bg-near-white pointer pa2 fw6 flex justify-between items-center"
+        onClick={[Function]}
+      >
+        <div
+          className="flex w-30 items-center"
+        >
+          <img
+            alt="repo-icon"
+            className="ml2 mr4"
+            src="repo.svg"
+            width="25"
+          />
+          <a
+            href="https://github.com/vtex-apps/minicart"
+            onClick={[Function]}
+            target="_blank"
+          >
+            vtex-apps/minicart
+          </a>
+        </div>
+        <label
+          className="w-20 f6 b db mr2"
+        >
+          Issues (
+          0
+          )
+        </label>
+        <label
+          className="w-20 f6 b db mr2"
+        >
+          Pull Requests (
+          1
+          )
+        </label>
+        <label
+          className="w-20 f6 b db mr2"
+        >
+          Active Branches (
+          4
+          )
+        </label>
+        <ComponentWithContext
+          repository={
+            Object {
+              "collaborators": Object {
+                "nodes": Array [
+                  Object {
+                    "avatarUrl": "https://avatars3.githubusercontent.com/u/10401309?v=4",
+                    "name": "Raphael Simoens",
+                    "url": "https://github.com/rsimoens",
+                  },
+                  Object {
+                    "avatarUrl": "https://avatars3.githubusercontent.com/u/12852518?v=4",
+                    "name": "Vitória Heliane",
+                    "url": "https://github.com/vitoriaHeliane",
+                  },
+                  Object {
+                    "avatarUrl": "https://avatars1.githubusercontent.com/u/13875462?v=4",
+                    "name": "Leonardo Padilha",
+                    "url": "https://github.com/lcfpadilha",
+                  },
+                  Object {
+                    "avatarUrl": "https://avatars2.githubusercontent.com/u/14097431?v=4",
+                    "name": "Mark Matern",
+                    "url": "https://github.com/mrkmat",
+                  },
+                  Object {
+                    "avatarUrl": "https://avatars1.githubusercontent.com/u/15784157?v=4",
+                    "name": "Juliane Lopes Ferreira",
+                    "url": "https://github.com/julopesferr",
+                  },
+                  Object {
+                    "avatarUrl": "https://avatars2.githubusercontent.com/u/15948386?v=4",
+                    "name": "Estácio Pereira",
+                    "url": "https://github.com/estacioneto",
+                  },
+                  Object {
+                    "avatarUrl": "https://avatars3.githubusercontent.com/u/18706156?v=4",
+                    "name": "Luciano de Oliveira Júnior",
+                    "url": "https://github.com/luciannojunior",
+                  },
+                  Object {
+                    "avatarUrl": "https://avatars2.githubusercontent.com/u/21203990?v=4",
+                    "name": null,
+                    "url": "https://github.com/gabrielgalc",
+                  },
+                  Object {
+                    "avatarUrl": "https://avatars0.githubusercontent.com/u/23402009?v=4",
+                    "name": null,
+                    "url": "https://github.com/lowbeer",
+                  },
+                  Object {
+                    "avatarUrl": "https://avatars0.githubusercontent.com/u/30424413?v=4",
+                    "name": null,
+                    "url": "https://github.com/luizerasmo",
+                  },
+                  Object {
+                    "avatarUrl": "https://avatars0.githubusercontent.com/u/31371069?v=4",
+                    "name": "Ian Duleba",
+                    "url": "https://github.com/iduleba",
+                  },
+                ],
+                "totalCount": 55,
+              },
+              "createdAt": "2018-04-11T20:23:43Z",
+              "description": "VTEX Minicart app ",
+              "id": "MDEwOlJlcG9zaXRvcnkxMjkxNDk3Nzk=",
+              "issues": Object {
+                "nodes": Array [],
+                "totalCount": 0,
+              },
+              "nameWithOwner": "vtex-apps/minicart",
+              "pullRequests": Object {
+                "nodes": Array [
+                  Object {
+                    "assignees": Object {
+                      "nodes": Array [
+                        Object {
+                          "avatarUrl": "https://avatars3.githubusercontent.com/u/12852518?v=4",
+                          "name": "Vitória Heliane",
+                        },
+                      ],
+                    },
+                    "reviews": Object {
+                      "nodes": Array [
+                        Object {
+                          "author": Object {
+                            "avatarUrl": "https://avatars2.githubusercontent.com/u/4960686?v=4",
+                            "login": "ClaudivanFilho",
+                          },
+                          "state": "CHANGES_REQUESTED",
+                        },
+                        Object {
+                          "author": Object {
+                            "avatarUrl": "https://avatars1.githubusercontent.com/u/3926634?v=4",
+                            "login": "salesfelipe",
+                          },
+                          "state": "APPROVED",
+                        },
+                        Object {
+                          "author": Object {
+                            "avatarUrl": "https://avatars2.githubusercontent.com/u/4960686?v=4",
+                            "login": "ClaudivanFilho",
+                          },
+                          "state": "CHANGES_REQUESTED",
+                        },
+                        Object {
+                          "author": Object {
+                            "avatarUrl": "https://avatars2.githubusercontent.com/u/4960686?v=4",
+                            "login": "ClaudivanFilho",
+                          },
+                          "state": "APPROVED",
+                        },
+                      ],
+                    },
+                    "title": "Update the Quantity Selector UI and Fix change quantity",
+                    "url": "https://github.com/vtex-apps/minicart/pull/37",
+                  },
+                ],
+                "totalCount": 1,
+              },
+              "refs": Object {
+                "nodes": Array [
+                  Object {
+                    "name": "bugfix/grapqlerror",
+                    "target": Object {
+                      "history": Object {
+                        "edges": Array [
+                          Object {
+                            "node": Object {
+                              "author": Object {
+                                "avatarUrl": "https://avatars1.githubusercontent.com/u/3926634?v=4",
+                                "name": "Felipe Sales",
+                              },
+                              "committedDate": "2018-05-12T18:58:01Z",
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  },
+                  Object {
+                    "name": "fix/duplicate-product",
+                    "target": Object {
+                      "history": Object {
+                        "edges": Array [
+                          Object {
+                            "node": Object {
+                              "author": Object {
+                                "avatarUrl": "https://avatars3.githubusercontent.com/u/10223856?v=4",
+                                "name": "Lucas Cordeiro",
+                              },
+                              "committedDate": "2018-07-03T14:20:39Z",
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  },
+                  Object {
+                    "name": "master",
+                    "target": Object {
+                      "history": Object {
+                        "edges": Array [
+                          Object {
+                            "node": Object {
+                              "author": Object {
+                                "avatarUrl": "https://avatars0.githubusercontent.com/u/8000984?v=4",
+                                "name": "Bruno Dias",
+                              },
+                              "committedDate": "2018-08-24T15:01:26Z",
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  },
+                  Object {
+                    "name": "update/quantity-selector",
+                    "target": Object {
+                      "history": Object {
+                        "edges": Array [
+                          Object {
+                            "node": Object {
+                              "author": Object {
+                                "avatarUrl": "https://avatars3.githubusercontent.com/u/12852518?v=4",
+                                "name": "Vitória Heliane",
+                              },
+                              "committedDate": "2018-08-29T12:46:12Z",
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  },
+                ],
+                "totalCount": 4,
+              },
+              "stargazers": Object {
+                "totalCount": 2,
+              },
+              "url": "https://github.com/vtex-apps/minicart",
+            }
+          }
+        >
+          <RemoveRepository
+            openToast={[Function]}
+            refetchRepositories={[Function]}
+            repository={
+              Object {
+                "collaborators": Object {
+                  "nodes": Array [
+                    Object {
+                      "avatarUrl": "https://avatars3.githubusercontent.com/u/10401309?v=4",
+                      "name": "Raphael Simoens",
+                      "url": "https://github.com/rsimoens",
+                    },
+                    Object {
+                      "avatarUrl": "https://avatars3.githubusercontent.com/u/12852518?v=4",
+                      "name": "Vitória Heliane",
+                      "url": "https://github.com/vitoriaHeliane",
+                    },
+                    Object {
+                      "avatarUrl": "https://avatars1.githubusercontent.com/u/13875462?v=4",
+                      "name": "Leonardo Padilha",
+                      "url": "https://github.com/lcfpadilha",
+                    },
+                    Object {
+                      "avatarUrl": "https://avatars2.githubusercontent.com/u/14097431?v=4",
+                      "name": "Mark Matern",
+                      "url": "https://github.com/mrkmat",
+                    },
+                    Object {
+                      "avatarUrl": "https://avatars1.githubusercontent.com/u/15784157?v=4",
+                      "name": "Juliane Lopes Ferreira",
+                      "url": "https://github.com/julopesferr",
+                    },
+                    Object {
+                      "avatarUrl": "https://avatars2.githubusercontent.com/u/15948386?v=4",
+                      "name": "Estácio Pereira",
+                      "url": "https://github.com/estacioneto",
+                    },
+                    Object {
+                      "avatarUrl": "https://avatars3.githubusercontent.com/u/18706156?v=4",
+                      "name": "Luciano de Oliveira Júnior",
+                      "url": "https://github.com/luciannojunior",
+                    },
+                    Object {
+                      "avatarUrl": "https://avatars2.githubusercontent.com/u/21203990?v=4",
+                      "name": null,
+                      "url": "https://github.com/gabrielgalc",
+                    },
+                    Object {
+                      "avatarUrl": "https://avatars0.githubusercontent.com/u/23402009?v=4",
+                      "name": null,
+                      "url": "https://github.com/lowbeer",
+                    },
+                    Object {
+                      "avatarUrl": "https://avatars0.githubusercontent.com/u/30424413?v=4",
+                      "name": null,
+                      "url": "https://github.com/luizerasmo",
+                    },
+                    Object {
+                      "avatarUrl": "https://avatars0.githubusercontent.com/u/31371069?v=4",
+                      "name": "Ian Duleba",
+                      "url": "https://github.com/iduleba",
+                    },
+                  ],
+                  "totalCount": 55,
+                },
+                "createdAt": "2018-04-11T20:23:43Z",
+                "description": "VTEX Minicart app ",
+                "id": "MDEwOlJlcG9zaXRvcnkxMjkxNDk3Nzk=",
+                "issues": Object {
+                  "nodes": Array [],
+                  "totalCount": 0,
+                },
+                "nameWithOwner": "vtex-apps/minicart",
+                "pullRequests": Object {
+                  "nodes": Array [
+                    Object {
+                      "assignees": Object {
+                        "nodes": Array [
+                          Object {
+                            "avatarUrl": "https://avatars3.githubusercontent.com/u/12852518?v=4",
+                            "name": "Vitória Heliane",
+                          },
+                        ],
+                      },
+                      "reviews": Object {
+                        "nodes": Array [
+                          Object {
+                            "author": Object {
+                              "avatarUrl": "https://avatars2.githubusercontent.com/u/4960686?v=4",
+                              "login": "ClaudivanFilho",
+                            },
+                            "state": "CHANGES_REQUESTED",
+                          },
+                          Object {
+                            "author": Object {
+                              "avatarUrl": "https://avatars1.githubusercontent.com/u/3926634?v=4",
+                              "login": "salesfelipe",
+                            },
+                            "state": "APPROVED",
+                          },
+                          Object {
+                            "author": Object {
+                              "avatarUrl": "https://avatars2.githubusercontent.com/u/4960686?v=4",
+                              "login": "ClaudivanFilho",
+                            },
+                            "state": "CHANGES_REQUESTED",
+                          },
+                          Object {
+                            "author": Object {
+                              "avatarUrl": "https://avatars2.githubusercontent.com/u/4960686?v=4",
+                              "login": "ClaudivanFilho",
+                            },
+                            "state": "APPROVED",
+                          },
+                        ],
+                      },
+                      "title": "Update the Quantity Selector UI and Fix change quantity",
+                      "url": "https://github.com/vtex-apps/minicart/pull/37",
+                    },
+                  ],
+                  "totalCount": 1,
+                },
+                "refs": Object {
+                  "nodes": Array [
+                    Object {
+                      "name": "bugfix/grapqlerror",
+                      "target": Object {
+                        "history": Object {
+                          "edges": Array [
+                            Object {
+                              "node": Object {
+                                "author": Object {
+                                  "avatarUrl": "https://avatars1.githubusercontent.com/u/3926634?v=4",
+                                  "name": "Felipe Sales",
+                                },
+                                "committedDate": "2018-05-12T18:58:01Z",
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    },
+                    Object {
+                      "name": "fix/duplicate-product",
+                      "target": Object {
+                        "history": Object {
+                          "edges": Array [
+                            Object {
+                              "node": Object {
+                                "author": Object {
+                                  "avatarUrl": "https://avatars3.githubusercontent.com/u/10223856?v=4",
+                                  "name": "Lucas Cordeiro",
+                                },
+                                "committedDate": "2018-07-03T14:20:39Z",
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    },
+                    Object {
+                      "name": "master",
+                      "target": Object {
+                        "history": Object {
+                          "edges": Array [
+                            Object {
+                              "node": Object {
+                                "author": Object {
+                                  "avatarUrl": "https://avatars0.githubusercontent.com/u/8000984?v=4",
+                                  "name": "Bruno Dias",
+                                },
+                                "committedDate": "2018-08-24T15:01:26Z",
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    },
+                    Object {
+                      "name": "update/quantity-selector",
+                      "target": Object {
+                        "history": Object {
+                          "edges": Array [
+                            Object {
+                              "node": Object {
+                                "author": Object {
+                                  "avatarUrl": "https://avatars3.githubusercontent.com/u/12852518?v=4",
+                                  "name": "Vitória Heliane",
+                                },
+                                "committedDate": "2018-08-29T12:46:12Z",
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    },
+                  ],
+                  "totalCount": 4,
+                },
+                "stargazers": Object {
+                  "totalCount": 2,
+                },
+                "url": "https://github.com/vtex-apps/minicart",
+              }
+            }
+          >
+            <img
+              alt="remove-icon"
+              className="flex items-center br7 ml2 pointer dim"
+              onClick={[Function]}
+              src="remove.svg"
+              width="20"
+            />
+          </RemoveRepository>
+        </ComponentWithContext>
+      </div>
+      <Collapse
+        fixedHeight={-1}
+        forceInitialAnimation={false}
+        hasNestedCollapse={false}
+        isOpened={false}
+        onMeasure={[Function]}
+        onRender={[Function]}
+        onRest={[Function]}
+        springConfig={
+          Object {
+            "damping": 20,
+            "stiffness": 100,
+          }
+        }
+        style={Object {}}
+        theme={
+          Object {
+            "collapse": "ReactCollapse--collapse",
+            "content": "ReactCollapse--content",
+          }
+        }
+      >
+        <Motion
+          defaultStyle={
+            Object {
+              "height": 0,
+            }
+          }
+          onRest={[Function]}
+          style={
+            Object {
+              "height": 0,
+            }
+          }
+        >
+          <div
+            className="ReactCollapse--collapse"
+            style={
+              Object {
+                "height": 0,
+                "overflow": "hidden",
+              }
+            }
+          >
+            <div
+              className="ReactCollapse--content"
+            >
+              <div
+                className="flex"
+              >
+                <div
+                  className="w-20 pa2"
+                >
+                  <h5
+                    className="mv2"
+                  >
+                    Owner
+                  </h5>
+                  <div
+                    className="flex flex-column"
+                  >
+                    <h5
+                      className="mv2"
+                    >
+                      Collaborators
+                    </h5>
+                    <div>
+                      <img
+                        alt="Raphael Simoens"
+                        className="fl br4 ma2"
+                        key="https://avatars3.githubusercontent.com/u/10401309?v=4"
+                        src="https://avatars3.githubusercontent.com/u/10401309?v=4"
+                        title="Raphael Simoens"
+                        width="30"
+                      />
+                      <img
+                        alt="Vitória Heliane"
+                        className="fl br4 ma2"
+                        key="https://avatars3.githubusercontent.com/u/12852518?v=4"
+                        src="https://avatars3.githubusercontent.com/u/12852518?v=4"
+                        title="Vitória Heliane"
+                        width="30"
+                      />
+                      <img
+                        alt="Leonardo Padilha"
+                        className="fl br4 ma2"
+                        key="https://avatars1.githubusercontent.com/u/13875462?v=4"
+                        src="https://avatars1.githubusercontent.com/u/13875462?v=4"
+                        title="Leonardo Padilha"
+                        width="30"
+                      />
+                      <img
+                        alt="Mark Matern"
+                        className="fl br4 ma2"
+                        key="https://avatars2.githubusercontent.com/u/14097431?v=4"
+                        src="https://avatars2.githubusercontent.com/u/14097431?v=4"
+                        title="Mark Matern"
+                        width="30"
+                      />
+                      <img
+                        alt="Juliane Lopes Ferreira"
+                        className="fl br4 ma2"
+                        key="https://avatars1.githubusercontent.com/u/15784157?v=4"
+                        src="https://avatars1.githubusercontent.com/u/15784157?v=4"
+                        title="Juliane Lopes Ferreira"
+                        width="30"
+                      />
+                      <img
+                        alt="Estácio Pereira"
+                        className="fl br4 ma2"
+                        key="https://avatars2.githubusercontent.com/u/15948386?v=4"
+                        src="https://avatars2.githubusercontent.com/u/15948386?v=4"
+                        title="Estácio Pereira"
+                        width="30"
+                      />
+                      <img
+                        alt="Luciano de Oliveira Júnior"
+                        className="fl br4 ma2"
+                        key="https://avatars3.githubusercontent.com/u/18706156?v=4"
+                        src="https://avatars3.githubusercontent.com/u/18706156?v=4"
+                        title="Luciano de Oliveira Júnior"
+                        width="30"
+                      />
+                      <img
+                        alt={null}
+                        className="fl br4 ma2"
+                        key="https://avatars2.githubusercontent.com/u/21203990?v=4"
+                        src="https://avatars2.githubusercontent.com/u/21203990?v=4"
+                        title={null}
+                        width="30"
+                      />
+                      <img
+                        alt={null}
+                        className="fl br4 ma2"
+                        key="https://avatars0.githubusercontent.com/u/23402009?v=4"
+                        src="https://avatars0.githubusercontent.com/u/23402009?v=4"
+                        title={null}
+                        width="30"
+                      />
+                      <img
+                        alt={null}
+                        className="fl br4 ma2"
+                        key="https://avatars0.githubusercontent.com/u/30424413?v=4"
+                        src="https://avatars0.githubusercontent.com/u/30424413?v=4"
+                        title={null}
+                        width="30"
+                      />
+                      <img
+                        alt="Ian Duleba"
+                        className="fl br4 ma2"
+                        key="https://avatars0.githubusercontent.com/u/31371069?v=4"
+                        src="https://avatars0.githubusercontent.com/u/31371069?v=4"
+                        title="Ian Duleba"
+                        width="30"
+                      />
+                      <div
+                        className="fl br4 ma2"
+                      >
+                        + 
+                        44
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="w-80 flex flex-column"
+                >
+                  <div
+                    className="w-100 f7 flex pv2"
+                  >
+                    VTEX Minicart app 
+                  </div>
+                  <div
+                    className="w-100 flex"
+                  >
+                    <div
+                      className="w-30 flex flex-column"
+                    >
+                      <h5
+                        className="mv2"
+                      >
+                        Active Branches (
+                        4
+                        )
+                      </h5>
+                    </div>
+                    <div
+                      className="w-70 flex flex-column"
+                    >
+                      <h5
+                        className="mv2"
+                      >
+                        PRS (
+                        1
+                        )
+                      </h5>
+                    </div>
+                  </div>
+                  <div
+                    className="flex flex-column"
+                  >
+                    <h5
+                      className="mv2"
+                    >
+                      Issues (
+                      0
+                      )
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Motion>
+      </Collapse>
+    </div>
+  </Repository>
+</RepositoryWithContext>
+`;

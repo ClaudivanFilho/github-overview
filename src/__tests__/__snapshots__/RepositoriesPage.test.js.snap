@@ -1,0 +1,477 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test RepositoriesPage component Renders correctly 1`] = `
+<RepositoriesPageWithContext
+  repositories={
+    Array [
+      Object {
+        "collaborators": Object {
+          "nodes": Array [],
+          "totalCount": 0,
+        },
+        "description": "description",
+        "id": "1",
+        "issues": Object {
+          "nodes": Array [],
+          "totalCount": 0,
+        },
+        "nameWithOwner": "vtex-apps/render-runtime",
+        "pullRequests": Object {
+          "nodes": Array [],
+          "totalCount": 0,
+        },
+        "refs": Object {
+          "nodes": Array [],
+          "totalCount": 0,
+        },
+        "url": "http://github.com/vtex-apps/render-runtime",
+      },
+    ]
+  }
+>
+  <RepositoriesPage
+    repositories={
+      Array [
+        Object {
+          "collaborators": Object {
+            "nodes": Array [],
+            "totalCount": 0,
+          },
+          "description": "description",
+          "id": "1",
+          "issues": Object {
+            "nodes": Array [],
+            "totalCount": 0,
+          },
+          "nameWithOwner": "vtex-apps/render-runtime",
+          "pullRequests": Object {
+            "nodes": Array [],
+            "totalCount": 0,
+          },
+          "refs": Object {
+            "nodes": Array [],
+            "totalCount": 0,
+          },
+          "url": "http://github.com/vtex-apps/render-runtime",
+        },
+      ]
+    }
+  >
+    <div
+      className="flex flex-column w-100 pa3 sans-serif"
+    >
+      <div
+        className="w-100 flex pb2"
+      >
+        <div
+          className="w-33 flex"
+        >
+          <ComponentWithContext>
+            <AddRepository
+              openToast={[Function]}
+              refetchRepositories={[Function]}
+            >
+              <div
+                className="flex items-center"
+              >
+                <input
+                  className="input-reset ba b--black-20 db w-auto pa0 pl2 bg-white br2"
+                  id="repository-name"
+                  onChange={[Function]}
+                  placeholder="Owner/Name"
+                  title="Add Repository"
+                  value=""
+                />
+                <img
+                  alt="add-icon"
+                  className="flex items-center br7 ml2 pointer dim"
+                  onClick={[Function]}
+                  src="add.svg"
+                  width="25"
+                />
+              </div>
+            </AddRepository>
+          </ComponentWithContext>
+        </div>
+        <div
+          className="w-33 flex justify-center"
+        >
+          <ComponentWithContext>
+            <Search
+              originalRepositories={Array []}
+              updateRepositories={[Function]}
+            >
+              <div
+                className="flex items-center"
+              >
+                <input
+                  className="go-search-input input-reset ba b--black-20 db w-100 bg-white br2"
+                  id="search"
+                  onChange={[Function]}
+                  placeholder="Search..."
+                  type="text"
+                  value=""
+                />
+                <img
+                  alt="s-icon"
+                  className="pl2 absolute"
+                  src="glass.svg"
+                  width="20"
+                />
+              </div>
+            </Search>
+          </ComponentWithContext>
+        </div>
+        <div
+          className="w-33 flex justify-end"
+        >
+          <ComponentWithContext>
+            <OrderBy
+              originalRepositories={Array []}
+              repositories={Array []}
+              updateRepositories={[Function]}
+            >
+              <div
+                className="flex items-center"
+              >
+                <select
+                  className="pl2 bg-white br2 pointer"
+                  id="orderBy"
+                  onChange={[Function]}
+                >
+                  <option
+                    key="NAME_ASC"
+                    value="NAME_ASC"
+                  >
+                    Name ASC
+                  </option>
+                  <option
+                    key="NAME_DESC"
+                    value="NAME_DESC"
+                  >
+                    Name DESC
+                  </option>
+                  <option
+                    key="ISSUES_ASC"
+                    value="ISSUES_ASC"
+                  >
+                    Issues ASC
+                  </option>
+                  <option
+                    key="ISSUES_DESC"
+                    value="ISSUES_DESC"
+                  >
+                    Issues DESC
+                  </option>
+                  <option
+                    key="PRS_ASC"
+                    value="PRS_ASC"
+                  >
+                    PR's ASC
+                  </option>
+                  <option
+                    key="PRS_DESC"
+                    value="PRS_DESC"
+                  >
+                    PR's DESC
+                  </option>
+                </select>
+              </div>
+            </OrderBy>
+          </ComponentWithContext>
+        </div>
+      </div>
+      <div
+        className="w-100"
+      >
+        <RepositoryWithContext
+          key="vtex-apps/render-runtime"
+          repository={
+            Object {
+              "collaborators": Object {
+                "nodes": Array [],
+                "totalCount": 0,
+              },
+              "description": "description",
+              "id": "1",
+              "issues": Object {
+                "nodes": Array [],
+                "totalCount": 0,
+              },
+              "nameWithOwner": "vtex-apps/render-runtime",
+              "pullRequests": Object {
+                "nodes": Array [],
+                "totalCount": 0,
+              },
+              "refs": Object {
+                "nodes": Array [],
+                "totalCount": 0,
+              },
+              "url": "http://github.com/vtex-apps/render-runtime",
+            }
+          }
+        >
+          <Repository
+            openToast={[Function]}
+            repository={
+              Object {
+                "collaborators": Object {
+                  "nodes": Array [],
+                  "totalCount": 0,
+                },
+                "description": "description",
+                "id": "1",
+                "issues": Object {
+                  "nodes": Array [],
+                  "totalCount": 0,
+                },
+                "nameWithOwner": "vtex-apps/render-runtime",
+                "pullRequests": Object {
+                  "nodes": Array [],
+                  "totalCount": 0,
+                },
+                "refs": Object {
+                  "nodes": Array [],
+                  "totalCount": 0,
+                },
+                "url": "http://github.com/vtex-apps/render-runtime",
+              }
+            }
+          >
+            <div
+              className="near-black ba bw1 b--black-20 br2 mb1"
+            >
+              <div
+                className="bg-near-white pointer pa2 fw6 flex justify-between items-center"
+                onClick={[Function]}
+              >
+                <div
+                  className="flex w-30 items-center"
+                >
+                  <img
+                    alt="repo-icon"
+                    className="ml2 mr4"
+                    src="repo.svg"
+                    width="25"
+                  />
+                  <a
+                    href="http://github.com/vtex-apps/render-runtime"
+                    onClick={[Function]}
+                    target="_blank"
+                  >
+                    vtex-apps/render-runtime
+                  </a>
+                </div>
+                <label
+                  className="w-20 f6 b db mr2"
+                >
+                  Issues (
+                  0
+                  )
+                </label>
+                <label
+                  className="w-20 f6 b db mr2"
+                >
+                  Pull Requests (
+                  0
+                  )
+                </label>
+                <label
+                  className="w-20 f6 b db mr2"
+                >
+                  Active Branches (
+                  0
+                  )
+                </label>
+                <ComponentWithContext
+                  repository={
+                    Object {
+                      "collaborators": Object {
+                        "nodes": Array [],
+                        "totalCount": 0,
+                      },
+                      "description": "description",
+                      "id": "1",
+                      "issues": Object {
+                        "nodes": Array [],
+                        "totalCount": 0,
+                      },
+                      "nameWithOwner": "vtex-apps/render-runtime",
+                      "pullRequests": Object {
+                        "nodes": Array [],
+                        "totalCount": 0,
+                      },
+                      "refs": Object {
+                        "nodes": Array [],
+                        "totalCount": 0,
+                      },
+                      "url": "http://github.com/vtex-apps/render-runtime",
+                    }
+                  }
+                >
+                  <RemoveRepository
+                    openToast={[Function]}
+                    refetchRepositories={[Function]}
+                    repository={
+                      Object {
+                        "collaborators": Object {
+                          "nodes": Array [],
+                          "totalCount": 0,
+                        },
+                        "description": "description",
+                        "id": "1",
+                        "issues": Object {
+                          "nodes": Array [],
+                          "totalCount": 0,
+                        },
+                        "nameWithOwner": "vtex-apps/render-runtime",
+                        "pullRequests": Object {
+                          "nodes": Array [],
+                          "totalCount": 0,
+                        },
+                        "refs": Object {
+                          "nodes": Array [],
+                          "totalCount": 0,
+                        },
+                        "url": "http://github.com/vtex-apps/render-runtime",
+                      }
+                    }
+                  >
+                    <img
+                      alt="remove-icon"
+                      className="flex items-center br7 ml2 pointer dim"
+                      onClick={[Function]}
+                      src="remove.svg"
+                      width="20"
+                    />
+                  </RemoveRepository>
+                </ComponentWithContext>
+              </div>
+              <Collapse
+                fixedHeight={-1}
+                forceInitialAnimation={false}
+                hasNestedCollapse={false}
+                isOpened={false}
+                onMeasure={[Function]}
+                onRender={[Function]}
+                onRest={[Function]}
+                springConfig={
+                  Object {
+                    "damping": 20,
+                    "stiffness": 100,
+                  }
+                }
+                style={Object {}}
+                theme={
+                  Object {
+                    "collapse": "ReactCollapse--collapse",
+                    "content": "ReactCollapse--content",
+                  }
+                }
+              >
+                <Motion
+                  defaultStyle={
+                    Object {
+                      "height": 0,
+                    }
+                  }
+                  onRest={[Function]}
+                  style={
+                    Object {
+                      "height": 0,
+                    }
+                  }
+                >
+                  <div
+                    className="ReactCollapse--collapse"
+                    style={
+                      Object {
+                        "height": 0,
+                        "overflow": "hidden",
+                      }
+                    }
+                  >
+                    <div
+                      className="ReactCollapse--content"
+                    >
+                      <div
+                        className="flex"
+                      >
+                        <div
+                          className="w-20 pa2"
+                        >
+                          <h5
+                            className="mv2"
+                          >
+                            Owner
+                          </h5>
+                          <div
+                            className="flex flex-column"
+                          >
+                            <h5
+                              className="mv2"
+                            >
+                              Collaborators
+                            </h5>
+                            <div />
+                          </div>
+                        </div>
+                        <div
+                          className="w-80 flex flex-column"
+                        >
+                          <div
+                            className="w-100 f7 flex pv2"
+                          >
+                            description
+                          </div>
+                          <div
+                            className="w-100 flex"
+                          >
+                            <div
+                              className="w-30 flex flex-column"
+                            >
+                              <h5
+                                className="mv2"
+                              >
+                                Active Branches (
+                                0
+                                )
+                              </h5>
+                            </div>
+                            <div
+                              className="w-70 flex flex-column"
+                            >
+                              <h5
+                                className="mv2"
+                              >
+                                PRS (
+                                0
+                                )
+                              </h5>
+                            </div>
+                          </div>
+                          <div
+                            className="flex flex-column"
+                          >
+                            <h5
+                              className="mv2"
+                            >
+                              Issues (
+                              0
+                              )
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Motion>
+              </Collapse>
+            </div>
+          </Repository>
+        </RepositoryWithContext>
+      </div>
+    </div>
+  </RepositoriesPage>
+</RepositoriesPageWithContext>
+`;

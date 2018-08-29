@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test RemoveRepository component Renders correctly 1`] = `
+<ComponentWithContext>
+  <RemoveRepository
+    openToast={[Function]}
+    refetchRepositories={[Function]}
+  >
+    <img
+      alt="remove-icon"
+      className="flex items-center br7 ml2 pointer dim"
+      onClick={[Function]}
+      src="remove.svg"
+      width="20"
+    />
+  </RemoveRepository>
+</ComponentWithContext>
+`;

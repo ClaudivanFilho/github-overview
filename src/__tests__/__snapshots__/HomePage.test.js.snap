@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test HomePage component Renders correctly 1`] = `
+<RepositoriesPageWithContext
+  repositories={
+    Array [
+      Object {
+        "collaborators": Object {
+          "nodes": Array [],
+          "totalCount": 0,
+        },
+        "description": "description",
+        "id": "1",
+        "issues": Object {
+          "nodes": Array [],
+          "totalCount": 0,
+        },
+        "nameWithOwner": "vtex-apps/render-runtime",
+        "pullRequests": Object {
+          "nodes": Array [],
+          "totalCount": 0,
+        },
+        "refs": Object {
+          "nodes": Array [],
+          "totalCount": 0,
+        },
+        "url": "http://github.com/vtex-apps/render-runtime",
+      },
+    ]
+  }
+>
+  <HomePage
+    repositories={
+      Array [
+        Object {
+          "collaborators": Object {
+            "nodes": Array [],
+            "totalCount": 0,
+          },
+          "description": "description",
+          "id": "1",
+          "issues": Object {
+            "nodes": Array [],
+            "totalCount": 0,
+          },
+          "nameWithOwner": "vtex-apps/render-runtime",
+          "pullRequests": Object {
+            "nodes": Array [],
+            "totalCount": 0,
+          },
+          "refs": Object {
+            "nodes": Array [],
+            "totalCount": 0,
+          },
+          "url": "http://github.com/vtex-apps/render-runtime",
+        },
+      ]
+    }
+  >
+    <div
+      className="w-100 flex flex-column"
+    >
+      <div
+        className="w-100"
+      >
+        <h3
+          className="mv2"
+        >
+          Your Pendencies
+        </h3>
+      </div>
+    </div>
+  </HomePage>
+</RepositoriesPageWithContext>
+`;

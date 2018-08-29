@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test AddRepository component Renders correctly 1`] = `
+<ComponentWithContext>
+  <AddRepository
+    openToast={[Function]}
+    refetchRepositories={[Function]}
+  >
+    <div
+      className="flex items-center"
+    >
+      <input
+        className="input-reset ba b--black-20 db w-auto pa0 pl2 bg-white br2"
+        id="repository-name"
+        onChange={[Function]}
+        placeholder="Owner/Name"
+        title="Add Repository"
+        value=""
+      />
+      <img
+        alt="add-icon"
+        className="flex items-center br7 ml2 pointer dim"
+        onClick={[Function]}
+        src="add.svg"
+        width="25"
+      />
+    </div>
+  </AddRepository>
+</ComponentWithContext>
+`;

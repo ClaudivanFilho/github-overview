@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Search component Renders correctly 1`] = `
+<ComponentWithContext>
+  <Search
+    originalRepositories={Array []}
+    updateRepositories={[Function]}
+  >
+    <div
+      className="flex items-center"
+    >
+      <input
+        className="go-search-input input-reset ba b--black-20 db w-100 bg-white br2"
+        id="search"
+        onChange={[Function]}
+        placeholder="Search..."
+        type="text"
+        value=""
+      />
+      <img
+        alt="s-icon"
+        className="pl2 absolute"
+        src="glass.svg"
+        width="20"
+      />
+    </div>
+  </Search>
+</ComponentWithContext>
+`;

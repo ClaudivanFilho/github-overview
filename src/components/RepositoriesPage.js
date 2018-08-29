@@ -39,7 +39,7 @@ class RepositoriesPage extends Component {
 export default function RepositoriesPageWithContext(props) {
   return (
     <RepositoryContext.Consumer>
-      {({ repositories }) => <RepositoriesPage {...props} repositories={repositories} />}
+      {({ repositories }) => <RepositoriesPage repositories={repositories} {...props} />}
     </RepositoryContext.Consumer>
   )
 }
