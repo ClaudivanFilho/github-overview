@@ -14,11 +14,11 @@ module.exports = {
   fetchRepositories: async (repositories) => {
     const results = await Promise.all(repositories.map(rep => fetchRepository(rep.owner, rep.name)
       .then(res => res.data.repository)
-      .catch(error => ({ error: error[0].message }))));
+      .catch(error => ({ error: error[0].message, nameWithOwner: `${rep.owner}/${rep.name}` }))));
     const collaborators = await Promise.all(
       repositories.map(rep => fetchCollaborators(rep.owner, rep.name).then(
         res => res.data.repository.collaborators,
-      ).catch(error => ({ error: error[0].message }))),
+      ).catch(error => ({ error: error[0].message, nameWithOwner: `${rep.owner}/${rep.name}` }))),
     );
     return results.map((rep, index) => {
       const newRep = { ...rep };

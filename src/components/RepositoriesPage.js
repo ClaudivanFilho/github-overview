@@ -28,7 +28,7 @@ class RepositoriesPage extends Component {
         </div>
         <div className="w-100">
           {this.props.repositories.map(rep => (
-            <Repository key={rep.id} repository={rep} />
+            <Repository key={rep.nameWithOwner} repository={rep} />
           ))}
         </div>
       </div>

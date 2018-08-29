@@ -47,7 +47,6 @@ class OrderBy extends Component {
   render() {
     return (
       <div className="flex items-center">
-        <label htmlFor="orderBy" className="f6 b db mr2">OrderBy: </label>
         <select id="orderBy" className="pl2 bg-white br2 pointer" onChange={(opt) => {
           this.doOrdenation(opt.target.value)
         }}>

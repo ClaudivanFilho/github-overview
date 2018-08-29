@@ -53,7 +53,7 @@ module.exports = (app) => {
 
     // VALIDATION
     if (!owner || !name) {
-      res.status(400).send('owner or name invalid.');
+      res.status(400).json({ error: 'owner or name invalid.' });
       return;
     }
 
@@ -62,6 +62,6 @@ module.exports = (app) => {
       rep.owner !== owner || rep.name !== name
     ));
     req.session.repositories = newRepositories;
-    res.send('repository removed successfully.');
+    res.json({ message: 'repository removed successfully.' });
   });
 };
