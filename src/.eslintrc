@@ -2,5 +2,8 @@
   "extends": [
     "vtex",
     "vtex-react"
-  ]
+  ],
+  "env": {
+    "jest": true
+  }
 }

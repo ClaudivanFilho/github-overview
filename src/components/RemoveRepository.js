@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+
 import ToastContext from '../contexts/ToastContext'
 import RepositoryContext from '../contexts/RepositoryContext'
 import RemoveIcon from '../images/remove.svg'
+import Api from '../api'
 
 class RemoveRepository extends Component {
   static propTypes = {
@@ -14,14 +16,7 @@ class RemoveRepository extends Component {
   handleRemove = (evt) => {
     evt.stopPropagation()
     const [owner, name] = this.props.repository.nameWithOwner.split('/')
-    fetch('/api/repository', {
-      method: 'DELETE',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ owner, name }),
-    })
+    Api.removeRepository(owner, name)
       .then(res => res.json())
       .then(res => {
         if (res.error) {

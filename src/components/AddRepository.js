@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import ToastContext from '../contexts/ToastContext'
 import RepositoryContext from '../contexts/RepositoryContext'
 import AddIcon from '../images/add.svg'
+import Api from '../api'
 
 class AddRepository extends Component {
   static propTypes = {
@@ -20,15 +21,7 @@ class AddRepository extends Component {
       return
     }
     const [owner, name] = this.state.repInput.split('/')
-    fetch('/api/repository', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ owner, name }),
-    })
-      .then(res => res.json())
+    Api.addRepository(owner, name)
       .then(res => {
         if (res.error) {
           this.props.openToast(res.error, true)

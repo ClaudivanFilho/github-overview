@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test App component Renders correctly 1`] = `
+<App>
+  <header
+    className="bg-near-white fixed w-100 ph3 pv3 pv3-ns ph4-m ph5-l shadow-3"
+  >
+    <nav
+      className="flex items-center f7 fw6 tracked sans-serif"
+    >
+      <span
+        className="f5 link purple dib mr3"
+        href="#"
+        title="Home"
+      >
+        GitHub Overview
+      </span>
+      <div
+        className="dib h1 br mr3 o-20 b--mid-gray"
+      />
+      <Link
+        className="ttu link dim mid-gray dib mr3"
+        to="/"
+      >
+        <a
+          href="#"
+        >
+          Home
+        </a>
+      </Link>
+      <Link
+        className="ttu link dim mid-gray dib mr3"
+        to="/repositories"
+      >
+        <a
+          href="#"
+        >
+          Repositories
+        </a>
+      </Link>
+    </nav>
+  </header>
+  <div
+    className="pt5"
+  >
+    <ToastContainer
+      autoClose={5000}
+      bodyClassName={null}
+      className={null}
+      closeButton={
+        <CloseButton
+          ariaLabel="close"
+        />
+      }
+      closeOnClick={true}
+      draggable={true}
+      draggablePercent={80}
+      hideProgressBar={false}
+      newestOnTop={false}
+      pauseOnFocusLoss={true}
+      pauseOnHover={true}
+      position="top-right"
+      progressClassName={null}
+      rtl={false}
+      style={null}
+      toastClassName={null}
+      transition={[Function]}
+    >
+      <div
+        className="Toastify"
+      />
+    </ToastContainer>
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    >
+      <HomePage>
+        <div
+          className="w-100 flex flex-column"
+        >
+          <div
+            className="w-100"
+          >
+            <h3
+              className="mv2"
+            >
+              Your Pendencies
+            </h3>
+          </div>
+        </div>
+      </HomePage>
+    </Route>
+    <Route
+      component={[Function]}
+      path="/repositories"
+    >
+      <RepositoriesPageWithContext>
+        <RepositoriesPage
+          repositories={Array []}
+        >
+          <div
+            className="flex flex-column w-100 pa3 sans-serif"
+          >
+            <div
+              className="w-100 flex pb2"
+            >
+              <div
+                className="w-33 flex"
+              >
+                <ComponentWithContext>
+                  <AddRepository
+                    openToast={[Function]}
+                    refetchRepositories={[Function]}
+                  >
+                    <div
+                      className="flex items-center"
+                    >
+                      <input
+                        className="input-reset ba b--black-20 db w-auto pa0 pl2 bg-white br2"
+                        id="repository-name"
+                        onChange={[Function]}
+                        placeholder="Owner/Name"
+                        title="Add Repository"
+                        value=""
+                      />
+                      <img
+                        alt="add-icon"
+                        className="flex items-center br7 ml2 pointer dim"
+                        onClick={[Function]}
+                        src="add.svg"
+                        width="25"
+                      />
+                    </div>
+                  </AddRepository>
+                </ComponentWithContext>
+              </div>
+              <div
+                className="w-33 flex justify-center"
+              >
+                <ComponentWithContext>
+                  <Search
+                    originalRepositories={Array []}
+                    updateRepositories={[Function]}
+                  >
+                    <div
+                      className="flex items-center"
+                    >
+                      <input
+                        className="go-search-input input-reset ba b--black-20 db w-100 bg-white br2"
+                        id="search"
+                        onChange={[Function]}
+                        placeholder="Search..."
+                        type="text"
+                        value=""
+                      />
+                      <img
+                        alt="s-icon"
+                        className="pl2 absolute"
+                        src="glass.svg"
+                        width="20"
+                      />
+                    </div>
+                  </Search>
+                </ComponentWithContext>
+              </div>
+              <div
+                className="w-33 flex justify-end"
+              >
+                <ComponentWithContext>
+                  <OrderBy
+                    originalRepositories={Array []}
+                    repositories={Array []}
+                    updateRepositories={[Function]}
+                  >
+                    <div
+                      className="flex items-center"
+                    >
+                      <select
+                        className="pl2 bg-white br2 pointer"
+                        id="orderBy"
+                        onChange={[Function]}
+                      >
+                        <option
+                          key="NAME_ASC"
+                          value="NAME_ASC"
+                        >
+                          Name ASC
+                        </option>
+                        <option
+                          key="NAME_DESC"
+                          value="NAME_DESC"
+                        >
+                          Name DESC
+                        </option>
+                        <option
+                          key="ISSUES_ASC"
+                          value="ISSUES_ASC"
+                        >
+                          Issues ASC
+                        </option>
+                        <option
+                          key="ISSUES_DESC"
+                          value="ISSUES_DESC"
+                        >
+                          Issues DESC
+                        </option>
+                        <option
+                          key="PRS_ASC"
+                          value="PRS_ASC"
+                        >
+                          PR's ASC
+                        </option>
+                        <option
+                          key="PRS_DESC"
+                          value="PRS_DESC"
+                        >
+                          PR's DESC
+                        </option>
+                      </select>
+                    </div>
+                  </OrderBy>
+                </ComponentWithContext>
+              </div>
+            </div>
+            <div
+              className="w-100"
+            />
+          </div>
+        </RepositoriesPage>
+      </RepositoriesPageWithContext>
+    </Route>
+  </div>
+</App>
+`;
