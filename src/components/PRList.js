@@ -11,6 +11,7 @@ export default class PRList extends Component {
       totalCount: PropTypes.number,
       nodes: PropTypes.arrayOf(PropTypes.object),
     }),
+    filterBy: PropTypes.func,
     nameWithOwner: PropTypes.string,
     seeMore: PropTypes.bool,
   }
@@ -36,12 +37,12 @@ export default class PRList extends Component {
   renderReviews(reviews) {
     const reviewsNormalized = this.getReviews(reviews)
     return (
-      <div className="w-40 flex justify-start items-center">
+      <div className="w-40 ml3 flex justify-start items-center">
         {reviewsNormalized.map(rev => (
           <img
             key={rev.author.login}
             alt={rev.author.login}
-            className="mh3"
+            className="mh1 mh3-m"
             src={rev.state === 'APPROVED' ? ApproveIcon : RejectedIcon}
             width="20"
             height="20"
@@ -52,29 +53,42 @@ export default class PRList extends Component {
   }
 
   render() {
-    const { pullRequests, seeMore, nameWithOwner } = this.props
+    const {
+      pullRequests: { nodes, totalCount },
+      seeMore,
+      nameWithOwner,
+      filterBy,
+    } = this.props
+
+    let prs = nodes
+    if (filterBy) {
+      prs = prs.filter(filterBy)
+    }
     return (
       <Fragment>
         {
-          pullRequests.nodes.map(pr => (
-            <div key={pr.title} className="w-100 flex justify-between">
-              <a
-                className="w-60 truncate link heavy-blue f6 pa3 dim flex items-center"
-                href={pr.url}
-                target="_blank"
-              >
-                <img className="mr4" src={prIcon} width="16" />
-                {pr.title}
-              </a>
-              {this.renderReviews(pr.reviews.nodes)}
-            </div>
+          prs.map((pr, index) => (
+            <Fragment key={pr.title}>
+              {index !== 0 && <div className="w-100 center br mb2 o-05 ba b--mid-gray"></div>}
+              <div className="w-100 flex justify-between">
+                <a
+                  className="w-60 truncate link heavy-blue pa3 dim flex items-center"
+                  href={pr.url}
+                  target="_blank"
+                >
+                  <img className="mr4" src={prIcon} width="16" />
+                  <span className="w-80 w-90-m truncate">{pr.title}</span>
+                </a>
+                {this.renderReviews(pr.reviews.nodes)}
+              </div>
+            </Fragment>
           ))
         }
         {
-          seeMore && pullRequests.totalCount > pullRequests.nodes.length && (
+          seeMore && totalCount > prs.length && (
             <div className="w-100 flex justify-between">
               <a
-                className="link heavy-blue f6 pa3 dim"
+                className="link heavy-blue pa3 dim"
                 href={`http://github.com${nameWithOwner}/pullRequests`}
                 target="_blank"
               >

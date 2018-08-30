@@ -22,17 +22,20 @@ export default class BranchList extends Component {
     return (
       <Fragment>
         {
-          issues.nodes.map(issue => (
-            <div key={issue.title} className="w-100 flex">
-              <a
-                className="w-100 truncate link heavy-blue f6 pa3 dim flex items-center"
-                href={issue.url}
-                target="_blank"
-              >
-                <img className="mr4" src={issueIcon} width="16" />
-                {issue.title}
-              </a>
-            </div>
+          issues.nodes.map((issue, index) => (
+            <Fragment key={issue.title}>
+              {index !== 0 && <div className="w-100 center br mb2 o-05 ba b--mid-gray"></div>}
+              <div className="w-100 flex">
+                <a
+                  className="w-100 truncate link heavy-blue f6 pa3 dim flex items-center"
+                  href={issue.url}
+                  target="_blank"
+                >
+                  <img className="mr4" src={issueIcon} width="16" />
+                  {issue.title}
+                </a>
+              </div>
+            </Fragment>
           ))
         }
         {

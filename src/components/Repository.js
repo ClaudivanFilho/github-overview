@@ -34,7 +34,6 @@ class Repository extends Component {
 
   render() {
     const { repository, repository: { collaborators } } = this.props
-    console.log(repository)
     return (
       <div className="near-black ba bw1 b--black-20 br2 mb1">
         <div className="bg-near-white pointer pa2 fw6 flex justify-between items-center" onClick={this.handleCollapseClick}>
@@ -110,14 +109,14 @@ class Repository extends Component {
                   <div className="w-100 flex flex-column flex-row-m">
                     <div className="w-100 w-40-m flex flex-column">
                       <h5 className="w-100 mv2">Active Branches ({repository.refs.totalCount})</h5>
-                      <div className="overflow-y-auto" style={{ maxHeight: '9rem' }}>
+                      <div className="overflow-y-auto f6" style={{ maxHeight: '9rem' }}>
                         <BranchList branches={repository.refs} />
                       </div>
                     </div>
                     <div className="h-90 br mh2 o-10 ba b--mid-gray"></div>
                     <div className="w-100 w-60-m flex flex-column">
                       <h5 className="w-100 mv2">PRS ({repository.pullRequests.totalCount})</h5>
-                      <div className="overflow-y-auto" style={{ maxHeight: '9rem' }}>
+                      <div className="overflow-y-auto f6" style={{ maxHeight: '9rem' }}>
                         <PRList pullRequests={repository.pullRequests} nameWithOwner={repository.nameWithOwner} />
                       </div>
                     </div>

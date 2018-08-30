@@ -49,6 +49,7 @@ module.exports = `
         nodes {
           title
           url
+          mergeable
           assignees(last: 1) {
             nodes {
               avatarUrl
