@@ -47,8 +47,6 @@ Para o deploy da demo utilizei a PasS `Heroku`, cujo setup já estava configurad
 
 Link da aplicação em produção ->  https://github-overview.herokuapp.com
 
-
-
 ### Comandos Úteis
 
 ``` 
