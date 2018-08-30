@@ -24,5 +24,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 require('./routes')(app);
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../build', 'index.html'));
+});
+
 app.listen(port);
 console.log(`Server started in the port ${port}`);

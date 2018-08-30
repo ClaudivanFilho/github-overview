@@ -73,7 +73,7 @@ class Repository extends Component {
         <Collapse isOpened={this.state.open} springConfig={{ stiffness: 100, damping: 20 }}>
           {
             !repository.error && (
-              <div className="flex flex-column flex-row-m">
+              <div className="flex flex-column flex-row-m pa3 pa0-m">
                 <div className="w-100 w-20-m pa2">
                   <div className="flex flex-column">
                     <h5 className="mv2">Collaborators</h5>

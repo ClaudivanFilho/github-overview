@@ -1,4 +1,3 @@
-const path = require('path');
 const controller = require('./controller');
 
 const defaultReps = [
@@ -58,14 +57,5 @@ module.exports = (app) => {
     ));
     req.session.repositories = newRepositories;
     res.json({ message: 'repository removed successfully.' });
-  });
-
-  app.get('/repositories', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-  });
-
-  /** Main route */
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
   });
 };
