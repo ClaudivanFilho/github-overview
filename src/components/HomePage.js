@@ -82,8 +82,8 @@ class HomePage extends Component {
             />
           </div>
         </div>
-        <div className="w-100 w-50-m pa2 pa4-m ma5-m mt4 mt0-m shadow-1">
-          <h2 className="mid-gray mv2">Pull Requests (Mergeable)</h2>
+        <div className="w-100 w-40-m w-50-l pa2 pa4-m ma5-m mt4 mt0-m shadow-1">
+          <h2 className="mid-gray mv2 f4-m mb3-m f3-l mb2-l">Pull Requests (Mergeable)</h2>
           <div className="w-100 br mb2 o-10 ba b--mid-gray"></div>
           <div className="overflow-y-auto f6" style={{ maxHeight: 'calc(100vh - 15rem)' }}>
             <PRList

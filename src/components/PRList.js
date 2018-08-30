@@ -42,7 +42,7 @@ export default class PRList extends Component {
           <img
             key={rev.author.login}
             alt={rev.author.login}
-            className="mh1 mh3-m"
+            className="mh1 mh3-l"
             src={rev.state === 'APPROVED' ? ApproveIcon : RejectedIcon}
             width="20"
             height="20"

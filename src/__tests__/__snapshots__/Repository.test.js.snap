@@ -453,7 +453,7 @@ exports[`Test Repository component Renders correctly 1`] = `
             width="25"
           />
           <a
-            className="truncate"
+            className="link truncate"
             href="https://github.com/vtex-apps/minicart"
             onClick={[Function]}
             target="_blank"
@@ -1228,20 +1228,24 @@ exports[`Test Repository component Renders correctly 1`] = `
                             className="w-100 flex justify-between"
                           >
                             <a
-                              className="link heavy-blue pa3 dim truncate flex items-center"
+                              className="w-80-m link heavy-blue pa3 dim truncate flex items-center"
                               href="http://github.com/vtex-apps/minicart/tree/bugfix/grapqlerror"
                               target="_blank"
                             >
-                              <img
-                                className="mr4"
-                                src="branch.svg"
-                                width="16"
-                              />
-                              <span
-                                className="truncate"
+                              <div
+                                className=" flex items-center justify-start"
                               >
-                                bugfix/grapqlerror
-                              </span>
+                                <img
+                                  className="mr4"
+                                  src="branch.svg"
+                                  width="16"
+                                />
+                                <span
+                                  className=" truncate"
+                                >
+                                  bugfix/grapqlerror
+                                </span>
+                              </div>
                             </a>
                             <div
                               className="mid-gray pa3 mr4 truncate flex items-center "
@@ -1275,20 +1279,24 @@ exports[`Test Repository component Renders correctly 1`] = `
                             className="w-100 flex justify-between"
                           >
                             <a
-                              className="link heavy-blue pa3 dim truncate flex items-center"
+                              className="w-80-m link heavy-blue pa3 dim truncate flex items-center"
                               href="http://github.com/vtex-apps/minicart/tree/fix/duplicate-product"
                               target="_blank"
                             >
-                              <img
-                                className="mr4"
-                                src="branch.svg"
-                                width="16"
-                              />
-                              <span
-                                className="truncate"
+                              <div
+                                className=" flex items-center justify-start"
                               >
-                                fix/duplicate-product
-                              </span>
+                                <img
+                                  className="mr4"
+                                  src="branch.svg"
+                                  width="16"
+                                />
+                                <span
+                                  className=" truncate"
+                                >
+                                  fix/duplicate-product
+                                </span>
+                              </div>
                             </a>
                             <div
                               className="mid-gray pa3 mr4 truncate flex items-center "
@@ -1322,20 +1330,24 @@ exports[`Test Repository component Renders correctly 1`] = `
                             className="w-100 flex justify-between"
                           >
                             <a
-                              className="link heavy-blue pa3 dim truncate flex items-center"
+                              className="w-80-m link heavy-blue pa3 dim truncate flex items-center"
                               href="http://github.com/vtex-apps/minicart/tree/master"
                               target="_blank"
                             >
-                              <img
-                                className="mr4"
-                                src="branch.svg"
-                                width="16"
-                              />
-                              <span
-                                className="truncate"
+                              <div
+                                className=" flex items-center justify-start"
                               >
-                                master
-                              </span>
+                                <img
+                                  className="mr4"
+                                  src="branch.svg"
+                                  width="16"
+                                />
+                                <span
+                                  className=" truncate"
+                                >
+                                  master
+                                </span>
+                              </div>
                             </a>
                             <div
                               className="mid-gray pa3 mr4 truncate flex items-center "
@@ -1369,20 +1381,24 @@ exports[`Test Repository component Renders correctly 1`] = `
                             className="w-100 flex justify-between"
                           >
                             <a
-                              className="link heavy-blue pa3 dim truncate flex items-center"
+                              className="w-80-m link heavy-blue pa3 dim truncate flex items-center"
                               href="http://github.com/vtex-apps/minicart/tree/update/quantity-selector"
                               target="_blank"
                             >
-                              <img
-                                className="mr4"
-                                src="branch.svg"
-                                width="16"
-                              />
-                              <span
-                                className="truncate"
+                              <div
+                                className=" flex items-center justify-start"
                               >
-                                update/quantity-selector
-                              </span>
+                                <img
+                                  className="mr4"
+                                  src="branch.svg"
+                                  width="16"
+                                />
+                                <span
+                                  className=" truncate"
+                                >
+                                  update/quantity-selector
+                                </span>
+                              </div>
                             </a>
                             <div
                               className="mid-gray pa3 mr4 truncate flex items-center "
@@ -1513,7 +1529,7 @@ exports[`Test Repository component Renders correctly 1`] = `
                             >
                               <img
                                 alt="ClaudivanFilho"
-                                className="mh1 mh3-m"
+                                className="mh1 mh3-l"
                                 height="20"
                                 key="ClaudivanFilho"
                                 src="OK.png"
@@ -1521,7 +1537,7 @@ exports[`Test Repository component Renders correctly 1`] = `
                               />
                               <img
                                 alt="salesfelipe"
-                                className="mh1 mh3-m"
+                                className="mh1 mh3-l"
                                 height="20"
                                 key="salesfelipe"
                                 src="OK.png"

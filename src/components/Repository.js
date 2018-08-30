@@ -40,7 +40,7 @@ class Repository extends Component {
           <div className="flex w-90 w-30-m items-center">
             <img className="ml2 mr4" src={repoIcon} alt="repo-icon" width="25" />
             <a
-              className="truncate"
+              className="link truncate"
               onClick={evt => evt.stopPropagation()}
               href={repository.url}
               target="_blank"

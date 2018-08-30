@@ -56,20 +56,26 @@ export default class BranchList extends Component {
               {index !== 0 && <div className="w-100 center br mb2 o-05 ba b--mid-gray"></div>}
               <div className="w-100 flex justify-between">
                 <a
-                  className="link heavy-blue pa3 dim truncate flex items-center"
+                  className="w-80-m link heavy-blue pa3 dim truncate flex items-center"
                   href={this.getBranchUrl(branch.repository.nameWithOwner, branch.name)}
                   target="_blank"
                 >
                   {
                     showRepository && (
-                      <div className="dn flex-m items-center mr5">
+                      <div className="dn flex-m items-center mr5 w-50-m">
                         <img className="mr4" src={repoIcon} width="16" />
-                        {branch.repository.nameWithOwner}
+                        <span className="w-80-m truncate">
+                          {branch.repository.nameWithOwner}
+                        </span>
                       </div>
                     )
                   }
-                  <img className="mr4" src={branchIcon} width="16" />
-                  <span className="truncate">{branch.name}</span>
+                  <div className={`${showRepository ? 'w-40-m' : ''} flex items-center justify-start`}>
+                    <img className="mr4" src={branchIcon} width="16" />
+                    <span className={`${showRepository ? 'w-80-m' : ''} truncate`}>
+                      {branch.name}
+                    </span>
+                  </div>
                 </a>
                 <div className={`mid-gray pa3 mr4 truncate flex items-center ${dateColor}`}>
                   {this.getDateFromNow(branch.target.history.edges[0].node.committedDate)}

@@ -31,6 +31,9 @@ class RepositoriesPage extends Component {
             <Repository key={rep.nameWithOwner} repository={rep} />
           ))}
         </div>
+        {this.props.repositories.length > 0 && (
+          <small className="f7 pa2 mid-gray">Click to expand</small>
+        )}
       </div>
     )
   }

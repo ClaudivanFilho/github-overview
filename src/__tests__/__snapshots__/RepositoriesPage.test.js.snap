@@ -254,7 +254,7 @@ exports[`Test RepositoriesPage component Renders correctly 1`] = `
                     width="25"
                   />
                   <a
-                    className="truncate"
+                    className="link truncate"
                     href="http://github.com/vtex-apps/render-runtime"
                     onClick={[Function]}
                     target="_blank"
@@ -542,6 +542,11 @@ exports[`Test RepositoriesPage component Renders correctly 1`] = `
           </Repository>
         </RepositoryWithContext>
       </div>
+      <small
+        className="f7 pa2 mid-gray"
+      >
+        Click to expand
+      </small>
     </div>
   </RepositoriesPage>
 </RepositoriesPageWithContext>
