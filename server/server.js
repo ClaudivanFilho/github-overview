@@ -5,18 +5,18 @@ const path = require('path');
 const app = express();
 const session = require('express-session');
 
-const isProduction = process.env.NODE_ENV === 'production';
+// const isProduction = process.env.NODE_ENV === 'production';
 const port = process.env.PORT || 8080;
 
 app.use(express.static(path.join(__dirname, '../build')));
-if (isProduction) {
-  app.set('trust proxy', 1);
-}
+// if (isProduction) {
+//   app.set('trust proxy', 1);
+// }
 app.use(session({
   secret: 'github-overview',
   resave: false,
   saveUninitialized: true,
-  cookie: { secure: isProduction },
+  // cookie: { secure: isProduction },
 }));
 
 app.use(bodyParser.json());

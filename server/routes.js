@@ -10,11 +10,6 @@ const defaultReps = [
 ];
 
 module.exports = (app) => {
-  /** Initial route */
-  app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-  });
-
   // ================== API ROUTES ============================ //
 
   /** Get all repositories from the session. */
@@ -63,5 +58,10 @@ module.exports = (app) => {
     ));
     req.session.repositories = newRepositories;
     res.json({ message: 'repository removed successfully.' });
+  });
+
+  /** Main route */
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
   });
 };

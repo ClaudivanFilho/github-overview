@@ -115,7 +115,7 @@ class Repository extends Component {
                     </div>
                     <div className="h-90 br mh2 o-10 ba b--mid-gray"></div>
                     <div className="w-100 w-60-m flex flex-column">
-                      <h5 className="w-100 mv2">PRS ({repository.pullRequests.totalCount})</h5>
+                      <h5 className="w-100 mv2">Pull Requests ({repository.pullRequests.totalCount})</h5>
                       <div className="overflow-y-auto f6" style={{ maxHeight: '9rem' }}>
                         <PRList pullRequests={repository.pullRequests} nameWithOwner={repository.nameWithOwner} />
                       </div>
