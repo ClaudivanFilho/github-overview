@@ -22,7 +22,7 @@ class RepositoriesPage extends Component {
           <div className="w-100 w-33-m flex justify-center">
             <Search />
           </div>
-          <div className="w-100 w-33-m flex justify-end">
+          <div className="w-100 w-33-m ml-auto flex justify-end">
             <OrderBy />
           </div>
         </div>

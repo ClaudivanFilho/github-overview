@@ -9,6 +9,10 @@ import RepositoryContext from '../contexts/RepositoryContext'
 import ToastContext from '../contexts/ToastContext'
 import Api from '../api'
 
+import githubIcon from '../images/github.svg'
+import repoIcon from '../images/repo.svg'
+import homeIcon from '../images/home.svg'
+
 export default class App extends Component {
   state = {
     repositories: [],
@@ -46,6 +50,10 @@ export default class App extends Component {
     }
   }
 
+  isHomePage() {
+    return window.location.pathname === '/'
+  }
+
   render() {
     const repProviderValues = {
       repositories: this.state.repositories,
@@ -57,16 +65,30 @@ export default class App extends Component {
     return (
       <RepositoryContext.Provider value={repProviderValues}>
         <ToastContext.Provider value={toastProviderValues}>
-          <header className="bg-near-white fixed w-100 ph5 pv3-ns ph4-m ph5-l shadow-3 z-2">
-            <nav className="flex justify-center justify-start-m items-center f7 fw6 tracked sans-serif">
-              <span className="pv4 f5 link purple dib mr5" href="#" title="Home">GitHub Overview</span>
-              <div className="dn dib-m h1 br mr5 o-20 b--mid-gray"></div>
-              <Link className="dn dib-m pa4 ttu link dim mid-gray f6" to="/">
-                Home
-              </Link>
-              <Link className="dn dib-m flex-m pa4 ttu link dim mid-gray f6" to="/repositories">
-                Repositories
-              </Link>
+          <header className="bg-near-white fixed w-100 shadow-3 z-2">
+            <nav className="flex justify-between justify-start-m items-center f7 fw6 tracked sans-serif">
+              <div className="flex items-center pv3 pv4-m ml5 ml5-m f5 link dark-gray mr5">
+                <img className="flex dn-m pa0-m mr3-m" src={githubIcon} width="30" alt="github-icon" />
+                <span className="dn dib-m" href="#" title="Home">
+                  GitHub Overview
+                </span>
+                <div className="dn flex-m h1 br mh5 o-20 b--mid-gray"></div>
+              </div>
+              <div className="flex">
+                <Link
+                  className={`dib pa5 ph6 ttu link dim mid-gray f6 ${this.isHomePage() ? 'bg-light-gray' : ''}`}
+                  to="/"
+                >
+                  <img className="flex dn-m pa0-m mr3-m" src={homeIcon} width="25" alt="home-icon" />
+                  <span className="dn flex-m items-center">Home</span>
+                </Link>
+                <Link
+                  className={`dib pa5 ph6 ttu link dim mid-gray f6 ${!this.isHomePage() ? 'bg-light-gray' : ''}`}
+                  to="/repositories">
+                  <img className="flex dn-m pa0-m mr3-m" src={repoIcon} width="20" alt="rep-icon" />
+                  <span className="dn flex-m items-center">Repositories</span>
+                </Link>
+              </div>
             </nav>
           </header>
           <div className="pt9">

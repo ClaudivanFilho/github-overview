@@ -6,6 +6,9 @@ import Moment from 'react-moment'
 import RemoveRepository from './RemoveRepository'
 import ToastContext from '../contexts/ToastContext'
 import repoIcon from '../images/repo.svg'
+import branchIcon from '../images/branch.svg'
+import prIcon from '../images/pr.svg'
+import issueIcon from '../images/issue.svg'
 import ApproveIcon from '../images/OK.png'
 import RejectedIcon from '../images/reject.png'
 
@@ -117,24 +120,28 @@ class Repository extends Component {
                 <div className="w-100 w-20-m pa2">
                   <div className="flex flex-column">
                     <h5 className="mv2">Collaborators</h5>
-                    <div>
-                      {collaborators.nodes.map(collab => (
-                        <img key={collab.avatarUrl} className="fl br4 ma2"
-                          width="30"
-                          src={collab.avatarUrl}
-                          alt={collab.name}
-                          title={collab.name}
-                        />
-                      ))}
-                      {collaborators.nodes.length < collaborators.totalCount && (
-                        <div className="fl br8 ma2 h2 w2 br-pill ba b--silver mid-gray flex items-center f7 fw6 justify-center">
-                        + {collaborators.totalCount - collaborators.nodes.length}
+                    {
+                      !collaborators.error && (
+                        <div>
+                          {collaborators.nodes.map(collab => (
+                            <img key={collab.avatarUrl} className="fl br4 ma2"
+                              width="30"
+                              src={collab.avatarUrl}
+                              alt={collab.name}
+                              title={collab.name}
+                            />
+                          ))}
+                          {collaborators.nodes.length < collaborators.totalCount && (
+                            <div className="fl br8 ma2 h2 w2 br-pill ba b--silver mid-gray flex items-center f7 fw6 justify-center">
+                            + {collaborators.totalCount - collaborators.nodes.length}
+                            </div>
+                          )}
                         </div>
-                      )}
-                    </div>
+                      )
+                    }
                   </div>
                 </div>
-                <div className="w-100w-80-m flex flex-column pb3">
+                <div className="w-100 w-80-m flex flex-column pb3">
                   <div className="w-100 flex flex-column pv2">
                     <h5 className="w-100 mv2">Description:</h5>
                     <p className="f7">
@@ -145,18 +152,19 @@ class Repository extends Component {
                   <div className="w-100 flex flex-column flex-row-m">
                     <div className="w-100 w-40-m flex flex-column">
                       <h5 className="w-100 mv2">Active Branches ({repository.refs.totalCount})</h5>
-                      <div className="overflow-y-auto" style={{ maxHeight: '8rem' }}>
+                      <div className="overflow-y-auto" style={{ maxHeight: '9rem' }}>
                         {
                           repository.refs.nodes.map(branch => (
                             <div key={branch.name} className="w-100 flex justify-between">
                               <a
-                                className="link heavy-blue f6 pa3 dim truncate"
+                                className="link heavy-blue f6 pa3 dim truncate flex items-center"
                                 href={this.getBranchUrl(repository, branch.name)}
                                 target="_blank"
                               >
+                                <img className="mr4" src={branchIcon} width="16" />
                                 {branch.name}
                               </a>
-                              <div className="mid-gray f6 pa3 mr4 truncate">
+                              <div className="mid-gray f6 pa3 mr4 truncate flex items-center">
                                 {this.getDateFromNow(branch.target.history.edges[0].node.committedDate)}
                               </div>
                             </div>
@@ -164,13 +172,15 @@ class Repository extends Component {
                         }
                         {
                           repository.refs.totalCount > repository.refs.nodes.length && (
-                            <a
-                              className="link heavy-blue f6 pa3 dim"
-                              href={`http://github.com${repository.nameWithOwner}/branches`}
-                              target="_blank"
-                            >
-                              See More
-                            </a>
+                            <div className="w-100 flex justify-between">
+                              <a
+                                className="link heavy-blue f6 pa3 dim"
+                                href={`http://github.com${repository.nameWithOwner}/branches`}
+                                target="_blank"
+                              >
+                                See More
+                              </a>
+                            </div>
                           )
                         }
                       </div>
@@ -178,15 +188,16 @@ class Repository extends Component {
                     <div className="h-90 br mh2 o-10 ba b--mid-gray"></div>
                     <div className="w-100 w-60-m flex flex-column">
                       <h5 className="w-100 mv2">PRS ({repository.pullRequests.totalCount})</h5>
-                      <div className="overflow-y-auto" style={{ maxHeight: '8rem' }}>
+                      <div className="overflow-y-auto" style={{ maxHeight: '9rem' }}>
                         {
                           repository.pullRequests.nodes.map(pr => (
                             <div key={pr.title} className="w-100 flex justify-between">
                               <a
-                                className="w-60 truncate link heavy-blue f6 pa3 dim"
+                                className="w-60 truncate link heavy-blue f6 pa3 dim flex items-center"
                                 href={pr.url}
                                 target="_blank"
                               >
+                                <img className="mr4" src={prIcon} width="16" />
                                 {pr.title}
                               </a>
                               {this.renderReviews(pr.reviews.nodes)}
@@ -195,13 +206,15 @@ class Repository extends Component {
                         }
                         {
                           repository.pullRequests.totalCount > repository.pullRequests.nodes.length && (
-                            <a
-                              className="link heavy-blue f6 pa3 dim"
-                              href={`http://github.com${repository.nameWithOwner}/pullRequests`}
-                              target="_blank"
-                            >
-                              See More
-                            </a>
+                            <div className="w-100 flex justify-between">
+                              <a
+                                className="link heavy-blue f6 pa3 dim"
+                                href={`http://github.com${repository.nameWithOwner}/pullRequests`}
+                                target="_blank"
+                              >
+                                See More
+                              </a>
+                            </div>
                           )
                         }
                       </div>
@@ -215,10 +228,11 @@ class Repository extends Component {
                         repository.issues.nodes.map(issue => (
                           <div key={issue.title} className="w-100 flex">
                             <a
-                              className="w-100 truncate link heavy-blue f6 pa3 dim"
+                              className="w-100 truncate link heavy-blue f6 pa3 dim flex items-center"
                               href={issue.url}
                               target="_blank"
                             >
+                              <img className="mr4" src={issueIcon} width="16" />
                               {issue.title}
                             </a>
                           </div>
@@ -226,13 +240,15 @@ class Repository extends Component {
                       }
                       {
                         repository.issues.totalCount > repository.issues.nodes.length && (
-                          <a
-                            className="link heavy-blue f6 pa3 dim"
-                            href={`http://github.com${repository.nameWithOwner}/issues`}
-                            target="_blank"
-                          >
-                            See More
-                          </a>
+                          <div className="w-100 flex justify-between">
+                            <a
+                              className="link heavy-blue f6 pa3 dim"
+                              href={`http://github.com${repository.nameWithOwner}/issues`}
+                              target="_blank"
+                            >
+                              See More
+                            </a>
+                          </div>
                         )
                       }
                     </div>
