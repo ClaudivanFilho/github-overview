@@ -83,6 +83,7 @@ exports[`Test Repository component Renders correctly 1`] = `
                 },
               ],
             },
+            "mergeable": "MERGEABLE",
             "reviews": Object {
               "nodes": Array [
                 Object {
@@ -125,6 +126,9 @@ exports[`Test Repository component Renders correctly 1`] = `
         "nodes": Array [
           Object {
             "name": "bugfix/grapqlerror",
+            "repository": Object {
+              "nameWithOwner": "vtex-apps/minicart",
+            },
             "target": Object {
               "history": Object {
                 "edges": Array [
@@ -143,6 +147,9 @@ exports[`Test Repository component Renders correctly 1`] = `
           },
           Object {
             "name": "fix/duplicate-product",
+            "repository": Object {
+              "nameWithOwner": "vtex-apps/minicart",
+            },
             "target": Object {
               "history": Object {
                 "edges": Array [
@@ -161,6 +168,9 @@ exports[`Test Repository component Renders correctly 1`] = `
           },
           Object {
             "name": "master",
+            "repository": Object {
+              "nameWithOwner": "vtex-apps/minicart",
+            },
             "target": Object {
               "history": Object {
                 "edges": Array [
@@ -179,6 +189,9 @@ exports[`Test Repository component Renders correctly 1`] = `
           },
           Object {
             "name": "update/quantity-selector",
+            "repository": Object {
+              "nameWithOwner": "vtex-apps/minicart",
+            },
             "target": Object {
               "history": Object {
                 "edges": Array [
@@ -288,6 +301,7 @@ exports[`Test Repository component Renders correctly 1`] = `
                   },
                 ],
               },
+              "mergeable": "MERGEABLE",
               "reviews": Object {
                 "nodes": Array [
                   Object {
@@ -330,6 +344,9 @@ exports[`Test Repository component Renders correctly 1`] = `
           "nodes": Array [
             Object {
               "name": "bugfix/grapqlerror",
+              "repository": Object {
+                "nameWithOwner": "vtex-apps/minicart",
+              },
               "target": Object {
                 "history": Object {
                   "edges": Array [
@@ -348,6 +365,9 @@ exports[`Test Repository component Renders correctly 1`] = `
             },
             Object {
               "name": "fix/duplicate-product",
+              "repository": Object {
+                "nameWithOwner": "vtex-apps/minicart",
+              },
               "target": Object {
                 "history": Object {
                   "edges": Array [
@@ -366,6 +386,9 @@ exports[`Test Repository component Renders correctly 1`] = `
             },
             Object {
               "name": "master",
+              "repository": Object {
+                "nameWithOwner": "vtex-apps/minicart",
+              },
               "target": Object {
                 "history": Object {
                   "edges": Array [
@@ -384,6 +407,9 @@ exports[`Test Repository component Renders correctly 1`] = `
             },
             Object {
               "name": "update/quantity-selector",
+              "repository": Object {
+                "nameWithOwner": "vtex-apps/minicart",
+              },
               "target": Object {
                 "history": Object {
                   "edges": Array [
@@ -418,7 +444,7 @@ exports[`Test Repository component Renders correctly 1`] = `
         onClick={[Function]}
       >
         <div
-          className="flex w-30 items-center"
+          className="flex w-90 w-30-m items-center"
         >
           <img
             alt="repo-icon"
@@ -427,6 +453,7 @@ exports[`Test Repository component Renders correctly 1`] = `
             width="25"
           />
           <a
+            className="truncate"
             href="https://github.com/vtex-apps/minicart"
             onClick={[Function]}
             target="_blank"
@@ -435,21 +462,21 @@ exports[`Test Repository component Renders correctly 1`] = `
           </a>
         </div>
         <label
-          className="w-20 f6 b db mr2"
+          className="w-20 f6 b dn db-m mr2"
         >
           Issues (
           0
           )
         </label>
         <label
-          className="w-20 f6 b db mr2"
+          className="w-20 f6 b dn db-m mr2"
         >
           Pull Requests (
           1
           )
         </label>
         <label
-          className="w-20 f6 b db mr2"
+          className="w-20 f6 b dn db-m mr2"
         >
           Active Branches (
           4
@@ -537,6 +564,7 @@ exports[`Test Repository component Renders correctly 1`] = `
                         },
                       ],
                     },
+                    "mergeable": "MERGEABLE",
                     "reviews": Object {
                       "nodes": Array [
                         Object {
@@ -579,6 +607,9 @@ exports[`Test Repository component Renders correctly 1`] = `
                 "nodes": Array [
                   Object {
                     "name": "bugfix/grapqlerror",
+                    "repository": Object {
+                      "nameWithOwner": "vtex-apps/minicart",
+                    },
                     "target": Object {
                       "history": Object {
                         "edges": Array [
@@ -597,6 +628,9 @@ exports[`Test Repository component Renders correctly 1`] = `
                   },
                   Object {
                     "name": "fix/duplicate-product",
+                    "repository": Object {
+                      "nameWithOwner": "vtex-apps/minicart",
+                    },
                     "target": Object {
                       "history": Object {
                         "edges": Array [
@@ -615,6 +649,9 @@ exports[`Test Repository component Renders correctly 1`] = `
                   },
                   Object {
                     "name": "master",
+                    "repository": Object {
+                      "nameWithOwner": "vtex-apps/minicart",
+                    },
                     "target": Object {
                       "history": Object {
                         "edges": Array [
@@ -633,6 +670,9 @@ exports[`Test Repository component Renders correctly 1`] = `
                   },
                   Object {
                     "name": "update/quantity-selector",
+                    "repository": Object {
+                      "nameWithOwner": "vtex-apps/minicart",
+                    },
                     "target": Object {
                       "history": Object {
                         "edges": Array [
@@ -743,6 +783,7 @@ exports[`Test Repository component Renders correctly 1`] = `
                           },
                         ],
                       },
+                      "mergeable": "MERGEABLE",
                       "reviews": Object {
                         "nodes": Array [
                           Object {
@@ -785,6 +826,9 @@ exports[`Test Repository component Renders correctly 1`] = `
                   "nodes": Array [
                     Object {
                       "name": "bugfix/grapqlerror",
+                      "repository": Object {
+                        "nameWithOwner": "vtex-apps/minicart",
+                      },
                       "target": Object {
                         "history": Object {
                           "edges": Array [
@@ -803,6 +847,9 @@ exports[`Test Repository component Renders correctly 1`] = `
                     },
                     Object {
                       "name": "fix/duplicate-product",
+                      "repository": Object {
+                        "nameWithOwner": "vtex-apps/minicart",
+                      },
                       "target": Object {
                         "history": Object {
                           "edges": Array [
@@ -821,6 +868,9 @@ exports[`Test Repository component Renders correctly 1`] = `
                     },
                     Object {
                       "name": "master",
+                      "repository": Object {
+                        "nameWithOwner": "vtex-apps/minicart",
+                      },
                       "target": Object {
                         "history": Object {
                           "edges": Array [
@@ -839,6 +889,9 @@ exports[`Test Repository component Renders correctly 1`] = `
                     },
                     Object {
                       "name": "update/quantity-selector",
+                      "repository": Object {
+                        "nameWithOwner": "vtex-apps/minicart",
+                      },
                       "target": Object {
                         "history": Object {
                           "edges": Array [
@@ -866,10 +919,11 @@ exports[`Test Repository component Renders correctly 1`] = `
             }
           >
             <img
-              alt="remove-icon"
-              className="flex items-center br7 ml2 pointer dim"
+              alt="remove"
+              className="flex items-center br7 mr3 pointer dim"
               onClick={[Function]}
               src="remove.svg"
+              title="remove"
               width="20"
             />
           </RemoveRepository>
@@ -923,16 +977,11 @@ exports[`Test Repository component Renders correctly 1`] = `
               className="ReactCollapse--content"
             >
               <div
-                className="flex"
+                className="flex flex-column flex-row-m"
               >
                 <div
-                  className="w-20 pa2"
+                  className="w-100 w-20-m pa2"
                 >
-                  <h5
-                    className="mv2"
-                  >
-                    Owner
-                  </h5>
                   <div
                     className="flex flex-column"
                   >
@@ -1031,7 +1080,7 @@ exports[`Test Repository component Renders correctly 1`] = `
                         width="30"
                       />
                       <div
-                        className="fl br4 ma2"
+                        className="fl br8 ma2 h2 w2 br-pill ba b--silver mid-gray flex items-center f7 fw6 justify-center"
                       >
                         + 
                         44
@@ -1040,49 +1089,482 @@ exports[`Test Repository component Renders correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  className="w-80 flex flex-column"
+                  className="w-100 w-80-m flex flex-column pb3"
                 >
                   <div
-                    className="w-100 f7 flex pv2"
+                    className="w-100 flex flex-column pv2"
                   >
-                    VTEX Minicart app 
+                    <h5
+                      className="w-100 mv2"
+                    >
+                      Description:
+                    </h5>
+                    <p
+                      className="f7"
+                    >
+                      VTEX Minicart app 
+                    </p>
                   </div>
                   <div
-                    className="w-100 flex"
+                    className="w-100 br mb2 o-10 ba b--mid-gray"
+                  />
+                  <div
+                    className="w-100 flex flex-column flex-row-m"
                   >
                     <div
-                      className="w-30 flex flex-column"
+                      className="w-100 w-40-m flex flex-column"
                     >
                       <h5
-                        className="mv2"
+                        className="w-100 mv2"
                       >
                         Active Branches (
                         4
                         )
                       </h5>
+                      <div
+                        className="overflow-y-auto f6"
+                        style={
+                          Object {
+                            "maxHeight": "9rem",
+                          }
+                        }
+                      >
+                        <BranchList
+                          branches={
+                            Object {
+                              "nodes": Array [
+                                Object {
+                                  "name": "bugfix/grapqlerror",
+                                  "repository": Object {
+                                    "nameWithOwner": "vtex-apps/minicart",
+                                  },
+                                  "target": Object {
+                                    "history": Object {
+                                      "edges": Array [
+                                        Object {
+                                          "node": Object {
+                                            "author": Object {
+                                              "avatarUrl": "https://avatars1.githubusercontent.com/u/3926634?v=4",
+                                              "name": "Felipe Sales",
+                                            },
+                                            "committedDate": "2018-05-12T18:58:01Z",
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                },
+                                Object {
+                                  "name": "fix/duplicate-product",
+                                  "repository": Object {
+                                    "nameWithOwner": "vtex-apps/minicart",
+                                  },
+                                  "target": Object {
+                                    "history": Object {
+                                      "edges": Array [
+                                        Object {
+                                          "node": Object {
+                                            "author": Object {
+                                              "avatarUrl": "https://avatars3.githubusercontent.com/u/10223856?v=4",
+                                              "name": "Lucas Cordeiro",
+                                            },
+                                            "committedDate": "2018-07-03T14:20:39Z",
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                },
+                                Object {
+                                  "name": "master",
+                                  "repository": Object {
+                                    "nameWithOwner": "vtex-apps/minicart",
+                                  },
+                                  "target": Object {
+                                    "history": Object {
+                                      "edges": Array [
+                                        Object {
+                                          "node": Object {
+                                            "author": Object {
+                                              "avatarUrl": "https://avatars0.githubusercontent.com/u/8000984?v=4",
+                                              "name": "Bruno Dias",
+                                            },
+                                            "committedDate": "2018-08-24T15:01:26Z",
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                },
+                                Object {
+                                  "name": "update/quantity-selector",
+                                  "repository": Object {
+                                    "nameWithOwner": "vtex-apps/minicart",
+                                  },
+                                  "target": Object {
+                                    "history": Object {
+                                      "edges": Array [
+                                        Object {
+                                          "node": Object {
+                                            "author": Object {
+                                              "avatarUrl": "https://avatars3.githubusercontent.com/u/12852518?v=4",
+                                              "name": "Vitória Heliane",
+                                            },
+                                            "committedDate": "2018-08-29T12:46:12Z",
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                },
+                              ],
+                              "totalCount": 4,
+                            }
+                          }
+                          dateColor=""
+                          seeMore={true}
+                        >
+                          <div
+                            className="w-100 flex justify-between"
+                          >
+                            <a
+                              className="link heavy-blue pa3 dim truncate flex items-center"
+                              href="http://github.com/vtex-apps/minicart/tree/bugfix/grapqlerror"
+                              target="_blank"
+                            >
+                              <img
+                                className="mr4"
+                                src="branch.svg"
+                                width="16"
+                              />
+                              <span
+                                className="truncate"
+                              >
+                                bugfix/grapqlerror
+                              </span>
+                            </a>
+                            <div
+                              className="mid-gray pa3 mr4 truncate flex items-center "
+                            >
+                              <t
+                                ago={false}
+                                calendar={false}
+                                decimal={false}
+                                element="time"
+                                filter={[Function]}
+                                fromNow={true}
+                                interval={60000}
+                                onChange={[Function]}
+                                toNow={false}
+                                unit={null}
+                                unix={false}
+                                utc={false}
+                              >
+                                <time
+                                  dateTime={"2018-05-12T18:58:01.000Z"}
+                                >
+                                  4 months ago
+                                </time>
+                              </t>
+                            </div>
+                          </div>
+                          <div
+                            className="w-100 center br mb2 o-05 ba b--mid-gray"
+                          />
+                          <div
+                            className="w-100 flex justify-between"
+                          >
+                            <a
+                              className="link heavy-blue pa3 dim truncate flex items-center"
+                              href="http://github.com/vtex-apps/minicart/tree/fix/duplicate-product"
+                              target="_blank"
+                            >
+                              <img
+                                className="mr4"
+                                src="branch.svg"
+                                width="16"
+                              />
+                              <span
+                                className="truncate"
+                              >
+                                fix/duplicate-product
+                              </span>
+                            </a>
+                            <div
+                              className="mid-gray pa3 mr4 truncate flex items-center "
+                            >
+                              <t
+                                ago={false}
+                                calendar={false}
+                                decimal={false}
+                                element="time"
+                                filter={[Function]}
+                                fromNow={true}
+                                interval={60000}
+                                onChange={[Function]}
+                                toNow={false}
+                                unit={null}
+                                unix={false}
+                                utc={false}
+                              >
+                                <time
+                                  dateTime={"2018-07-03T14:20:39.000Z"}
+                                >
+                                  2 months ago
+                                </time>
+                              </t>
+                            </div>
+                          </div>
+                          <div
+                            className="w-100 center br mb2 o-05 ba b--mid-gray"
+                          />
+                          <div
+                            className="w-100 flex justify-between"
+                          >
+                            <a
+                              className="link heavy-blue pa3 dim truncate flex items-center"
+                              href="http://github.com/vtex-apps/minicart/tree/master"
+                              target="_blank"
+                            >
+                              <img
+                                className="mr4"
+                                src="branch.svg"
+                                width="16"
+                              />
+                              <span
+                                className="truncate"
+                              >
+                                master
+                              </span>
+                            </a>
+                            <div
+                              className="mid-gray pa3 mr4 truncate flex items-center "
+                            >
+                              <t
+                                ago={false}
+                                calendar={false}
+                                decimal={false}
+                                element="time"
+                                filter={[Function]}
+                                fromNow={true}
+                                interval={60000}
+                                onChange={[Function]}
+                                toNow={false}
+                                unit={null}
+                                unix={false}
+                                utc={false}
+                              >
+                                <time
+                                  dateTime={"2018-08-24T15:01:26.000Z"}
+                                >
+                                  6 days ago
+                                </time>
+                              </t>
+                            </div>
+                          </div>
+                          <div
+                            className="w-100 center br mb2 o-05 ba b--mid-gray"
+                          />
+                          <div
+                            className="w-100 flex justify-between"
+                          >
+                            <a
+                              className="link heavy-blue pa3 dim truncate flex items-center"
+                              href="http://github.com/vtex-apps/minicart/tree/update/quantity-selector"
+                              target="_blank"
+                            >
+                              <img
+                                className="mr4"
+                                src="branch.svg"
+                                width="16"
+                              />
+                              <span
+                                className="truncate"
+                              >
+                                update/quantity-selector
+                              </span>
+                            </a>
+                            <div
+                              className="mid-gray pa3 mr4 truncate flex items-center "
+                            >
+                              <t
+                                ago={false}
+                                calendar={false}
+                                decimal={false}
+                                element="time"
+                                filter={[Function]}
+                                fromNow={true}
+                                interval={60000}
+                                onChange={[Function]}
+                                toNow={false}
+                                unit={null}
+                                unix={false}
+                                utc={false}
+                              >
+                                <time
+                                  dateTime={"2018-08-29T12:46:12.000Z"}
+                                >
+                                  a day ago
+                                </time>
+                              </t>
+                            </div>
+                          </div>
+                        </BranchList>
+                      </div>
                     </div>
                     <div
-                      className="w-70 flex flex-column"
+                      className="h-90 br mh2 o-10 ba b--mid-gray"
+                    />
+                    <div
+                      className="w-100 w-60-m flex flex-column"
                     >
                       <h5
-                        className="mv2"
+                        className="w-100 mv2"
                       >
                         PRS (
                         1
                         )
                       </h5>
+                      <div
+                        className="overflow-y-auto f6"
+                        style={
+                          Object {
+                            "maxHeight": "9rem",
+                          }
+                        }
+                      >
+                        <PRList
+                          nameWithOwner="vtex-apps/minicart"
+                          pullRequests={
+                            Object {
+                              "nodes": Array [
+                                Object {
+                                  "assignees": Object {
+                                    "nodes": Array [
+                                      Object {
+                                        "avatarUrl": "https://avatars3.githubusercontent.com/u/12852518?v=4",
+                                        "name": "Vitória Heliane",
+                                      },
+                                    ],
+                                  },
+                                  "mergeable": "MERGEABLE",
+                                  "reviews": Object {
+                                    "nodes": Array [
+                                      Object {
+                                        "author": Object {
+                                          "avatarUrl": "https://avatars2.githubusercontent.com/u/4960686?v=4",
+                                          "login": "ClaudivanFilho",
+                                        },
+                                        "state": "CHANGES_REQUESTED",
+                                      },
+                                      Object {
+                                        "author": Object {
+                                          "avatarUrl": "https://avatars1.githubusercontent.com/u/3926634?v=4",
+                                          "login": "salesfelipe",
+                                        },
+                                        "state": "APPROVED",
+                                      },
+                                      Object {
+                                        "author": Object {
+                                          "avatarUrl": "https://avatars2.githubusercontent.com/u/4960686?v=4",
+                                          "login": "ClaudivanFilho",
+                                        },
+                                        "state": "CHANGES_REQUESTED",
+                                      },
+                                      Object {
+                                        "author": Object {
+                                          "avatarUrl": "https://avatars2.githubusercontent.com/u/4960686?v=4",
+                                          "login": "ClaudivanFilho",
+                                        },
+                                        "state": "APPROVED",
+                                      },
+                                    ],
+                                  },
+                                  "title": "Update the Quantity Selector UI and Fix change quantity",
+                                  "url": "https://github.com/vtex-apps/minicart/pull/37",
+                                },
+                              ],
+                              "totalCount": 1,
+                            }
+                          }
+                          seeMore={true}
+                        >
+                          <div
+                            className="w-100 flex justify-between"
+                          >
+                            <a
+                              className="w-60 truncate link heavy-blue pa3 dim flex items-center"
+                              href="https://github.com/vtex-apps/minicart/pull/37"
+                              target="_blank"
+                            >
+                              <img
+                                className="mr4"
+                                src="pr.svg"
+                                width="16"
+                              />
+                              <span
+                                className="w-80 w-90-m truncate"
+                              >
+                                Update the Quantity Selector UI and Fix change quantity
+                              </span>
+                            </a>
+                            <div
+                              className="w-40 ml3 flex justify-start items-center"
+                            >
+                              <img
+                                alt="ClaudivanFilho"
+                                className="mh1 mh3-m"
+                                height="20"
+                                key="ClaudivanFilho"
+                                src="OK.png"
+                                width="20"
+                              />
+                              <img
+                                alt="salesfelipe"
+                                className="mh1 mh3-m"
+                                height="20"
+                                key="salesfelipe"
+                                src="OK.png"
+                                width="20"
+                              />
+                            </div>
+                          </div>
+                        </PRList>
+                      </div>
                     </div>
                   </div>
+                  <div
+                    className="w-100 br mv2 o-10 ba b--mid-gray"
+                  />
                   <div
                     className="flex flex-column"
                   >
                     <h5
-                      className="mv2"
+                      className="w-100 mv2"
                     >
                       Issues (
                       0
                       )
                     </h5>
+                    <div
+                      className="overflow-y-auto"
+                      style={
+                        Object {
+                          "maxHeight": "8rem",
+                        }
+                      }
+                    >
+                      <BranchList
+                        issues={
+                          Object {
+                            "nodes": Array [],
+                            "totalCount": 0,
+                          }
+                        }
+                        nameWithOwner="vtex-apps/minicart"
+                        seeMore={true}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>

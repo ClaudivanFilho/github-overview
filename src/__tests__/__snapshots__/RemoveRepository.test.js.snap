@@ -7,10 +7,11 @@ exports[`Test RemoveRepository component Renders correctly 1`] = `
     refetchRepositories={[Function]}
   >
     <img
-      alt="remove-icon"
-      className="flex items-center br7 ml2 pointer dim"
+      alt="remove"
+      className="flex items-center br7 mr3 pointer dim"
       onClick={[Function]}
       src="remove.svg"
+      title="remove"
       width="20"
     />
   </RemoveRepository>

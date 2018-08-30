@@ -61,10 +61,10 @@ exports[`Test RepositoriesPage component Renders correctly 1`] = `
       className="flex flex-column w-100 pa3 sans-serif"
     >
       <div
-        className="w-100 flex pb2"
+        className="w-100 flex flex-column flex-row-m pb2"
       >
         <div
-          className="w-33 flex"
+          className="w-100 w-33-m flex"
         >
           <ComponentWithContext>
             <AddRepository
@@ -72,10 +72,10 @@ exports[`Test RepositoriesPage component Renders correctly 1`] = `
               refetchRepositories={[Function]}
             >
               <div
-                className="flex items-center"
+                className="flex items-center w-100 w-auto-m ma2 ma0-m"
               >
                 <input
-                  className="input-reset ba b--black-20 db w-auto pa0 pl2 bg-white br2"
+                  className="input-reset db w-100 w-auto-m pa0 pl2 bg-white br2 ba b--silver"
                   id="repository-name"
                   onChange={[Function]}
                   placeholder="Owner/Name"
@@ -94,7 +94,7 @@ exports[`Test RepositoriesPage component Renders correctly 1`] = `
           </ComponentWithContext>
         </div>
         <div
-          className="w-33 flex justify-center"
+          className="w-100 w-33-m flex justify-center"
         >
           <ComponentWithContext>
             <Search
@@ -102,10 +102,10 @@ exports[`Test RepositoriesPage component Renders correctly 1`] = `
               updateRepositories={[Function]}
             >
               <div
-                className="flex items-center"
+                className="flex items-center w-100 w-auto-m ma2 ma0-m"
               >
                 <input
-                  className="go-search-input input-reset ba b--black-20 db w-100 bg-white br2"
+                  className="input-reset ba b--silver db w-100 bg-white br2 pl8"
                   id="search"
                   onChange={[Function]}
                   placeholder="Search..."
@@ -114,7 +114,7 @@ exports[`Test RepositoriesPage component Renders correctly 1`] = `
                 />
                 <img
                   alt="s-icon"
-                  className="pl2 absolute"
+                  className="pl3 absolute"
                   src="glass.svg"
                   width="20"
                 />
@@ -123,7 +123,7 @@ exports[`Test RepositoriesPage component Renders correctly 1`] = `
           </ComponentWithContext>
         </div>
         <div
-          className="w-33 flex justify-end"
+          className="w-100 w-33-m ml-auto flex justify-end"
         >
           <ComponentWithContext>
             <OrderBy
@@ -132,11 +132,10 @@ exports[`Test RepositoriesPage component Renders correctly 1`] = `
               updateRepositories={[Function]}
             >
               <div
-                className="flex items-center"
+                className="flex items-center justify-end w-100 w-auto-m ma2 ma0-m"
               >
                 <select
-                  className="pl2 bg-white br2 pointer"
-                  id="orderBy"
+                  className="w-100 w4-m input-reset pl2 bg-white mid-gray b--silver ba br2 pointer f5"
                   onChange={[Function]}
                 >
                   <option
@@ -246,7 +245,7 @@ exports[`Test RepositoriesPage component Renders correctly 1`] = `
                 onClick={[Function]}
               >
                 <div
-                  className="flex w-30 items-center"
+                  className="flex w-90 w-30-m items-center"
                 >
                   <img
                     alt="repo-icon"
@@ -255,6 +254,7 @@ exports[`Test RepositoriesPage component Renders correctly 1`] = `
                     width="25"
                   />
                   <a
+                    className="truncate"
                     href="http://github.com/vtex-apps/render-runtime"
                     onClick={[Function]}
                     target="_blank"
@@ -263,21 +263,21 @@ exports[`Test RepositoriesPage component Renders correctly 1`] = `
                   </a>
                 </div>
                 <label
-                  className="w-20 f6 b db mr2"
+                  className="w-20 f6 b dn db-m mr2"
                 >
                   Issues (
                   0
                   )
                 </label>
                 <label
-                  className="w-20 f6 b db mr2"
+                  className="w-20 f6 b dn db-m mr2"
                 >
                   Pull Requests (
                   0
                   )
                 </label>
                 <label
-                  className="w-20 f6 b db mr2"
+                  className="w-20 f6 b dn db-m mr2"
                 >
                   Active Branches (
                   0
@@ -338,10 +338,11 @@ exports[`Test RepositoriesPage component Renders correctly 1`] = `
                     }
                   >
                     <img
-                      alt="remove-icon"
-                      className="flex items-center br7 ml2 pointer dim"
+                      alt="remove"
+                      className="flex items-center br7 mr3 pointer dim"
                       onClick={[Function]}
                       src="remove.svg"
+                      title="remove"
                       width="20"
                     />
                   </RemoveRepository>
@@ -395,16 +396,11 @@ exports[`Test RepositoriesPage component Renders correctly 1`] = `
                       className="ReactCollapse--content"
                     >
                       <div
-                        className="flex"
+                        className="flex flex-column flex-row-m"
                       >
                         <div
-                          className="w-20 pa2"
+                          className="w-100 w-20-m pa2"
                         >
-                          <h5
-                            className="mv2"
-                          >
-                            Owner
-                          </h5>
                           <div
                             className="flex flex-column"
                           >
@@ -417,49 +413,124 @@ exports[`Test RepositoriesPage component Renders correctly 1`] = `
                           </div>
                         </div>
                         <div
-                          className="w-80 flex flex-column"
+                          className="w-100 w-80-m flex flex-column pb3"
                         >
                           <div
-                            className="w-100 f7 flex pv2"
+                            className="w-100 flex flex-column pv2"
                           >
-                            description
+                            <h5
+                              className="w-100 mv2"
+                            >
+                              Description:
+                            </h5>
+                            <p
+                              className="f7"
+                            >
+                              description
+                            </p>
                           </div>
                           <div
-                            className="w-100 flex"
+                            className="w-100 br mb2 o-10 ba b--mid-gray"
+                          />
+                          <div
+                            className="w-100 flex flex-column flex-row-m"
                           >
                             <div
-                              className="w-30 flex flex-column"
+                              className="w-100 w-40-m flex flex-column"
                             >
                               <h5
-                                className="mv2"
+                                className="w-100 mv2"
                               >
                                 Active Branches (
                                 0
                                 )
                               </h5>
+                              <div
+                                className="overflow-y-auto f6"
+                                style={
+                                  Object {
+                                    "maxHeight": "9rem",
+                                  }
+                                }
+                              >
+                                <BranchList
+                                  branches={
+                                    Object {
+                                      "nodes": Array [],
+                                      "totalCount": 0,
+                                    }
+                                  }
+                                  dateColor=""
+                                  seeMore={true}
+                                />
+                              </div>
                             </div>
                             <div
-                              className="w-70 flex flex-column"
+                              className="h-90 br mh2 o-10 ba b--mid-gray"
+                            />
+                            <div
+                              className="w-100 w-60-m flex flex-column"
                             >
                               <h5
-                                className="mv2"
+                                className="w-100 mv2"
                               >
                                 PRS (
                                 0
                                 )
                               </h5>
+                              <div
+                                className="overflow-y-auto f6"
+                                style={
+                                  Object {
+                                    "maxHeight": "9rem",
+                                  }
+                                }
+                              >
+                                <PRList
+                                  nameWithOwner="vtex-apps/render-runtime"
+                                  pullRequests={
+                                    Object {
+                                      "nodes": Array [],
+                                      "totalCount": 0,
+                                    }
+                                  }
+                                  seeMore={true}
+                                />
+                              </div>
                             </div>
                           </div>
+                          <div
+                            className="w-100 br mv2 o-10 ba b--mid-gray"
+                          />
                           <div
                             className="flex flex-column"
                           >
                             <h5
-                              className="mv2"
+                              className="w-100 mv2"
                             >
                               Issues (
                               0
                               )
                             </h5>
+                            <div
+                              className="overflow-y-auto"
+                              style={
+                                Object {
+                                  "maxHeight": "8rem",
+                                }
+                              }
+                            >
+                              <BranchList
+                                issues={
+                                  Object {
+                                    "nodes": Array [],
+                                    "totalCount": 0,
+                                  }
+                                }
+                                nameWithOwner="vtex-apps/render-runtime"
+                                seeMore={true}
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>

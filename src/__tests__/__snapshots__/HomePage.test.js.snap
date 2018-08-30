@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test HomePage component Renders correctly 1`] = `
-<RepositoriesPageWithContext
+<HomePageWithContext
   repositories={
     Array [
       Object {
@@ -58,18 +58,73 @@ exports[`Test HomePage component Renders correctly 1`] = `
     }
   >
     <div
-      className="w-100 flex flex-column"
+      className="w-100 flex flex-column flex-row-m pa2 pb4"
     >
       <div
-        className="w-100"
+        className="w-100 w-50-m pa2 pa4-m ma5-m shadow-1"
       >
-        <h3
-          className="mv2"
+        <h2
+          className="mid-gray mv2"
         >
-          Your Pendencies
-        </h3>
+          Inactive Branches
+        </h2>
+        <div
+          className="w-100 br mb2 o-10 ba b--mid-gray"
+        />
+        <div
+          className="overflow-y-auto f6"
+          style={
+            Object {
+              "maxHeight": "calc(100vh - 15rem)",
+            }
+          }
+        >
+          <BranchList
+            branches={
+              Object {
+                "nodes": Array [],
+              }
+            }
+            dateColor="red"
+            filterBy={[Function]}
+            orderBy={[Function]}
+            seeMore={false}
+            showRepository={true}
+          />
+        </div>
+      </div>
+      <div
+        className="w-100 w-50-m pa2 pa4-m ma5-m mt4 mt0-m shadow-1"
+      >
+        <h2
+          className="mid-gray mv2"
+        >
+          Pull Requests (Mergeable)
+        </h2>
+        <div
+          className="w-100 br mb2 o-10 ba b--mid-gray"
+        />
+        <div
+          className="overflow-y-auto f6"
+          style={
+            Object {
+              "maxHeight": "calc(100vh - 15rem)",
+            }
+          }
+        >
+          <PRList
+            filterBy={[Function]}
+            pullRequests={
+              Object {
+                "nodes": Array [],
+              }
+            }
+            seeMore={false}
+            showRepository={true}
+          />
+        </div>
       </div>
     </div>
   </HomePage>
-</RepositoriesPageWithContext>
+</HomePageWithContext>
 `;

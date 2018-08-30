@@ -94,6 +94,9 @@ export const RepositoryMock = {
     'nodes': [
       {
         'name': 'bugfix/grapqlerror',
+        'repository': {
+          'nameWithOwner': 'vtex-apps/minicart',
+        },
         'target': {
           'history': {
             'edges': [
@@ -112,6 +115,9 @@ export const RepositoryMock = {
       },
       {
         'name': 'fix/duplicate-product',
+        'repository': {
+          'nameWithOwner': 'vtex-apps/minicart',
+        },
         'target': {
           'history': {
             'edges': [
@@ -130,6 +136,9 @@ export const RepositoryMock = {
       },
       {
         'name': 'master',
+        'repository': {
+          'nameWithOwner': 'vtex-apps/minicart',
+        },
         'target': {
           'history': {
             'edges': [
@@ -148,6 +157,9 @@ export const RepositoryMock = {
       },
       {
         'name': 'update/quantity-selector',
+        'repository': {
+          'nameWithOwner': 'vtex-apps/minicart',
+        },
         'target': {
           'history': {
             'edges': [
@@ -179,6 +191,7 @@ export const RepositoryMock = {
       {
         'title': 'Update the Quantity Selector UI and Fix change quantity',
         'url': 'https://github.com/vtex-apps/minicart/pull/37',
+        'mergeable': 'MERGEABLE',
         'assignees': {
           'nodes': [
             {

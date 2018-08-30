@@ -3,45 +3,79 @@
 exports[`Test App component Renders correctly 1`] = `
 <App>
   <header
-    className="bg-near-white fixed w-100 ph3 pv3 pv3-ns ph4-m ph5-l shadow-3"
+    className="bg-near-white fixed w-100 shadow-3 z-2"
   >
     <nav
-      className="flex items-center f7 fw6 tracked sans-serif"
+      className="flex justify-between justify-start-m items-center f7 fw6 tracked sans-serif"
     >
-      <span
-        className="f5 link purple dib mr3"
-        href="#"
-        title="Home"
-      >
-        GitHub Overview
-      </span>
       <div
-        className="dib h1 br mr3 o-20 b--mid-gray"
-      />
-      <Link
-        className="ttu link dim mid-gray dib mr3"
-        to="/"
+        className="flex items-center pv3 pv4-m ml5 ml5-m f5 link dark-gray mr5"
       >
-        <a
+        <img
+          alt="github-icon"
+          className="flex dn-m pa0-m mr3-m"
+          src="github.svg"
+          width="30"
+        />
+        <span
+          className="dn dib-m"
           href="#"
+          title="Home"
         >
-          Home
-        </a>
-      </Link>
-      <Link
-        className="ttu link dim mid-gray dib mr3"
-        to="/repositories"
+          GitHub Overview
+        </span>
+        <div
+          className="dn flex-m h1 br mh5 o-20 b--mid-gray"
+        />
+      </div>
+      <div
+        className="flex"
       >
-        <a
-          href="#"
+        <Link
+          className="dib pa5 ph6 ttu link dim mid-gray f6 bg-light-gray"
+          to="/"
         >
-          Repositories
-        </a>
-      </Link>
+          <a
+            href="#"
+          >
+            <img
+              alt="home-icon"
+              className="flex dn-m pa0-m mr3-m"
+              src="home.svg"
+              width="25"
+            />
+            <span
+              className="dn flex-m items-center"
+            >
+              Home
+            </span>
+          </a>
+        </Link>
+        <Link
+          className="dib pa5 ph6 ttu link dim mid-gray f6 "
+          to="/repositories"
+        >
+          <a
+            href="#"
+          >
+            <img
+              alt="rep-icon"
+              className="flex dn-m pa0-m mr3-m"
+              src="repo.svg"
+              width="20"
+            />
+            <span
+              className="dn flex-m items-center"
+            >
+              Repositories
+            </span>
+          </a>
+        </Link>
+      </div>
     </nav>
   </header>
   <div
-    className="pt5"
+    className="pt9"
   >
     <ToastContainer
       autoClose={5000}
@@ -75,25 +109,80 @@ exports[`Test App component Renders correctly 1`] = `
       exact={true}
       path="/"
     >
-      <RepositoriesPageWithContext>
+      <HomePageWithContext>
         <HomePage
           repositories={Array []}
         >
           <div
-            className="w-100 flex flex-column"
+            className="w-100 flex flex-column flex-row-m pa2 pb4"
           >
             <div
-              className="w-100"
+              className="w-100 w-50-m pa2 pa4-m ma5-m shadow-1"
             >
-              <h3
-                className="mv2"
+              <h2
+                className="mid-gray mv2"
               >
-                Your Pendencies
-              </h3>
+                Inactive Branches
+              </h2>
+              <div
+                className="w-100 br mb2 o-10 ba b--mid-gray"
+              />
+              <div
+                className="overflow-y-auto f6"
+                style={
+                  Object {
+                    "maxHeight": "calc(100vh - 15rem)",
+                  }
+                }
+              >
+                <BranchList
+                  branches={
+                    Object {
+                      "nodes": Array [],
+                    }
+                  }
+                  dateColor="red"
+                  filterBy={[Function]}
+                  orderBy={[Function]}
+                  seeMore={false}
+                  showRepository={true}
+                />
+              </div>
+            </div>
+            <div
+              className="w-100 w-50-m pa2 pa4-m ma5-m mt4 mt0-m shadow-1"
+            >
+              <h2
+                className="mid-gray mv2"
+              >
+                Pull Requests (Mergeable)
+              </h2>
+              <div
+                className="w-100 br mb2 o-10 ba b--mid-gray"
+              />
+              <div
+                className="overflow-y-auto f6"
+                style={
+                  Object {
+                    "maxHeight": "calc(100vh - 15rem)",
+                  }
+                }
+              >
+                <PRList
+                  filterBy={[Function]}
+                  pullRequests={
+                    Object {
+                      "nodes": Array [],
+                    }
+                  }
+                  seeMore={false}
+                  showRepository={true}
+                />
+              </div>
             </div>
           </div>
         </HomePage>
-      </RepositoriesPageWithContext>
+      </HomePageWithContext>
     </Route>
     <Route
       component={[Function]}
@@ -107,10 +196,10 @@ exports[`Test App component Renders correctly 1`] = `
             className="flex flex-column w-100 pa3 sans-serif"
           >
             <div
-              className="w-100 flex pb2"
+              className="w-100 flex flex-column flex-row-m pb2"
             >
               <div
-                className="w-33 flex"
+                className="w-100 w-33-m flex"
               >
                 <ComponentWithContext>
                   <AddRepository
@@ -118,10 +207,10 @@ exports[`Test App component Renders correctly 1`] = `
                     refetchRepositories={[Function]}
                   >
                     <div
-                      className="flex items-center"
+                      className="flex items-center w-100 w-auto-m ma2 ma0-m"
                     >
                       <input
-                        className="input-reset ba b--black-20 db w-auto pa0 pl2 bg-white br2"
+                        className="input-reset db w-100 w-auto-m pa0 pl2 bg-white br2 ba b--silver"
                         id="repository-name"
                         onChange={[Function]}
                         placeholder="Owner/Name"
@@ -140,7 +229,7 @@ exports[`Test App component Renders correctly 1`] = `
                 </ComponentWithContext>
               </div>
               <div
-                className="w-33 flex justify-center"
+                className="w-100 w-33-m flex justify-center"
               >
                 <ComponentWithContext>
                   <Search
@@ -148,10 +237,10 @@ exports[`Test App component Renders correctly 1`] = `
                     updateRepositories={[Function]}
                   >
                     <div
-                      className="flex items-center"
+                      className="flex items-center w-100 w-auto-m ma2 ma0-m"
                     >
                       <input
-                        className="go-search-input input-reset ba b--black-20 db w-100 bg-white br2"
+                        className="input-reset ba b--silver db w-100 bg-white br2 pl8"
                         id="search"
                         onChange={[Function]}
                         placeholder="Search..."
@@ -160,7 +249,7 @@ exports[`Test App component Renders correctly 1`] = `
                       />
                       <img
                         alt="s-icon"
-                        className="pl2 absolute"
+                        className="pl3 absolute"
                         src="glass.svg"
                         width="20"
                       />
@@ -169,7 +258,7 @@ exports[`Test App component Renders correctly 1`] = `
                 </ComponentWithContext>
               </div>
               <div
-                className="w-33 flex justify-end"
+                className="w-100 w-33-m ml-auto flex justify-end"
               >
                 <ComponentWithContext>
                   <OrderBy
@@ -178,11 +267,10 @@ exports[`Test App component Renders correctly 1`] = `
                     updateRepositories={[Function]}
                   >
                     <div
-                      className="flex items-center"
+                      className="flex items-center justify-end w-100 w-auto-m ma2 ma0-m"
                     >
                       <select
-                        className="pl2 bg-white br2 pointer"
-                        id="orderBy"
+                        className="w-100 w4-m input-reset pl2 bg-white mid-gray b--silver ba br2 pointer f5"
                         onChange={[Function]}
                       >
                         <option
