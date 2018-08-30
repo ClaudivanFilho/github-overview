@@ -977,7 +977,7 @@ exports[`Test Repository component Renders correctly 1`] = `
               className="ReactCollapse--content"
             >
               <div
-                className="flex flex-column flex-row-m"
+                className="flex flex-column flex-row-m pa3 pa0-m"
               >
                 <div
                   className="w-100 w-20-m pa2"
@@ -1437,7 +1437,7 @@ exports[`Test Repository component Renders correctly 1`] = `
                       <h5
                         className="w-100 mv2"
                       >
-                        PRS (
+                        Pull Requests (
                         1
                         )
                       </h5>
