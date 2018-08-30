@@ -1,16 +1,14 @@
 import React, { Component, Fragment } from 'react'
 import { Collapse } from 'react-collapse'
 import PropTypes from 'prop-types'
-import Moment from 'react-moment'
 
 import RemoveRepository from './RemoveRepository'
 import ToastContext from '../contexts/ToastContext'
+import BranchList from './BranchList'
+import PRList from './PRList'
+import IssueList from './IssueList'
+
 import repoIcon from '../images/repo.svg'
-import branchIcon from '../images/branch.svg'
-import prIcon from '../images/pr.svg'
-import issueIcon from '../images/issue.svg'
-import ApproveIcon from '../images/OK.png'
-import RejectedIcon from '../images/reject.png'
 
 class Repository extends Component {
   static propTypes = {
@@ -32,46 +30,6 @@ class Repository extends Component {
     this.setState({
       open: !this.state.open,
     })
-  }
-
-  getBranchUrl(repository, name) {
-    return `http://github.com/${repository.nameWithOwner}/tree/${name}`
-  }
-
-  getReviews(reviews) {
-    const revsLogins = []
-    const revsFinal = []
-    const revsReversed = reviews.slice().reverse()
-    // eslint-disable-next-line
-    revsReversed.map(rev => {
-      if (!revsLogins.includes(rev.author.login)) {
-        revsLogins.push(rev.author.login)
-        revsFinal.push(rev)
-      }
-    })
-    return revsFinal
-  }
-
-  renderReviews(reviews) {
-    const reviewsNormalized = this.getReviews(reviews)
-    return (
-      <div className="w-40 flex justify-start items-center">
-        {reviewsNormalized.map(rev => (
-          <img
-            key={rev.author.login}
-            alt={rev.author.login}
-            className="mh3"
-            src={rev.state === 'APPROVED' ? ApproveIcon : RejectedIcon}
-            width="20"
-            height="20"
-          />
-        ))}
-      </div>
-    )
-  }
-
-  getDateFromNow(dateString) {
-    return <Moment fromNow>{dateString}</Moment>
   }
 
   render() {
@@ -153,70 +111,14 @@ class Repository extends Component {
                     <div className="w-100 w-40-m flex flex-column">
                       <h5 className="w-100 mv2">Active Branches ({repository.refs.totalCount})</h5>
                       <div className="overflow-y-auto" style={{ maxHeight: '9rem' }}>
-                        {
-                          repository.refs.nodes.map(branch => (
-                            <div key={branch.name} className="w-100 flex justify-between">
-                              <a
-                                className="link heavy-blue f6 pa3 dim truncate flex items-center"
-                                href={this.getBranchUrl(repository, branch.name)}
-                                target="_blank"
-                              >
-                                <img className="mr4" src={branchIcon} width="16" />
-                                {branch.name}
-                              </a>
-                              <div className="mid-gray f6 pa3 mr4 truncate flex items-center">
-                                {this.getDateFromNow(branch.target.history.edges[0].node.committedDate)}
-                              </div>
-                            </div>
-                          ))
-                        }
-                        {
-                          repository.refs.totalCount > repository.refs.nodes.length && (
-                            <div className="w-100 flex justify-between">
-                              <a
-                                className="link heavy-blue f6 pa3 dim"
-                                href={`http://github.com${repository.nameWithOwner}/branches`}
-                                target="_blank"
-                              >
-                                See More
-                              </a>
-                            </div>
-                          )
-                        }
+                        <BranchList branches={repository.refs} />
                       </div>
                     </div>
                     <div className="h-90 br mh2 o-10 ba b--mid-gray"></div>
                     <div className="w-100 w-60-m flex flex-column">
                       <h5 className="w-100 mv2">PRS ({repository.pullRequests.totalCount})</h5>
                       <div className="overflow-y-auto" style={{ maxHeight: '9rem' }}>
-                        {
-                          repository.pullRequests.nodes.map(pr => (
-                            <div key={pr.title} className="w-100 flex justify-between">
-                              <a
-                                className="w-60 truncate link heavy-blue f6 pa3 dim flex items-center"
-                                href={pr.url}
-                                target="_blank"
-                              >
-                                <img className="mr4" src={prIcon} width="16" />
-                                {pr.title}
-                              </a>
-                              {this.renderReviews(pr.reviews.nodes)}
-                            </div>
-                          ))
-                        }
-                        {
-                          repository.pullRequests.totalCount > repository.pullRequests.nodes.length && (
-                            <div className="w-100 flex justify-between">
-                              <a
-                                className="link heavy-blue f6 pa3 dim"
-                                href={`http://github.com${repository.nameWithOwner}/pullRequests`}
-                                target="_blank"
-                              >
-                                See More
-                              </a>
-                            </div>
-                          )
-                        }
+                        <PRList pullRequests={repository.pullRequests} nameWithOwner={repository.nameWithOwner} />
                       </div>
                     </div>
                   </div>
@@ -224,33 +126,7 @@ class Repository extends Component {
                   <div className="flex flex-column">
                     <h5 className="w-100 mv2">Issues ({repository.issues.totalCount})</h5>
                     <div className="overflow-y-auto" style={{ maxHeight: '8rem' }}>
-                      {
-                        repository.issues.nodes.map(issue => (
-                          <div key={issue.title} className="w-100 flex">
-                            <a
-                              className="w-100 truncate link heavy-blue f6 pa3 dim flex items-center"
-                              href={issue.url}
-                              target="_blank"
-                            >
-                              <img className="mr4" src={issueIcon} width="16" />
-                              {issue.title}
-                            </a>
-                          </div>
-                        ))
-                      }
-                      {
-                        repository.issues.totalCount > repository.issues.nodes.length && (
-                          <div className="w-100 flex justify-between">
-                            <a
-                              className="link heavy-blue f6 pa3 dim"
-                              href={`http://github.com${repository.nameWithOwner}/issues`}
-                              target="_blank"
-                            >
-                              See More
-                            </a>
-                          </div>
-                        )
-                      }
+                      <IssueList issues={repository.issues} nameWithOwner={repository.nameWithOwner} />
                     </div>
                   </div>
                 </div>

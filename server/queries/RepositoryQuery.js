@@ -10,6 +10,9 @@ module.exports = `
         totalCount
         nodes {
           name
+          repository {
+            nameWithOwner
+          }
           target {
             ... on Commit {
               history(first: 1) {
