@@ -32,9 +32,10 @@ class RemoveRepository extends Component {
   render() {
     return (
       <img
-        className="flex items-center br7 ml2 pointer dim"
-        src={RemoveIcon} alt="remove-icon"
+        className="flex items-center br7 mr3 pointer dim"
+        src={RemoveIcon} alt="remove"
         width="20"
+        title="remove"
         onClick={this.handleRemove}
       />
     )

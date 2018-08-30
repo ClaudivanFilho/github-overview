@@ -35,10 +35,10 @@ class AddRepository extends Component {
 
   render() {
     return (
-      <div className="flex items-center">
+      <div className="flex items-center w-100 w-auto-m ma2 ma0-m">
         <input
           id="repository-name"
-          className="input-reset ba b--black-20 db w-auto pa0 pl2 bg-white br2"
+          className="input-reset db w-100 w-auto-m pa0 pl2 bg-white br2 ba b--silver"
           placeholder="Owner/Name"
 
           title="Add Repository"

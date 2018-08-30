@@ -15,14 +15,14 @@ class RepositoriesPage extends Component {
   render() {
     return (
       <div className="flex flex-column w-100 pa3 sans-serif">
-        <div className="w-100 flex pb2">
-          <div className="w-33 flex">
+        <div className="w-100 flex flex-column flex-row-m pb2">
+          <div className="w-100 w-33-m flex">
             <AddRepository />
           </div>
-          <div className="w-33 flex justify-center">
+          <div className="w-100 w-33-m flex justify-center">
             <Search />
           </div>
-          <div className="w-33 flex justify-end">
+          <div className="w-100 w-33-m flex justify-end">
             <OrderBy />
           </div>
         </div>

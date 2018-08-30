@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './components/App'
 import registerServiceWorker from './registerServiceWorker'
 
-import './tachyons.min.css'
+import './tachyons.css'
 
 ReactDOM.render(
   <BrowserRouter>

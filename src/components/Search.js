@@ -30,16 +30,16 @@ class Search extends Component {
 
   render() {
     return (
-      <div className="flex items-center">
+      <div className="flex items-center w-100 w-auto-m ma2 ma0-m">
         <input
           id="search"
           placeholder="Search..."
-          className="go-search-input input-reset ba b--black-20 db w-100 bg-white br2"
+          className="input-reset ba b--silver db w-100 bg-white br2 pl8"
           type="text"
           value={this.state.inputText}
           onChange={this.handleTextChange}
         />
-        <img className="pl2 absolute" src={SearchIcon} alt="s-icon" width="20" />
+        <img className="pl3 absolute" src={SearchIcon} alt="s-icon" width="20" />
       </div>
     )
   }

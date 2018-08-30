@@ -1,7 +1,7 @@
 module.exports = `
   query ($owner: String!, $name: String!) {
     repository(owner: $owner, name: $name) {
-      collaborators(last: 11) {
+      collaborators(last: 30) {
         totalCount
         nodes {        
           url
@@ -11,4 +11,4 @@ module.exports = `
       }
     }
   }
-`
+`;

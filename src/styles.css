@@ -1,24 +1,14 @@
-.go-side-bar {
-  width: 220px;
-  background-color: #1A2225;
-}
-
-.go-search-input {
-  padding-left: 3rem;
-}
-
 input {
-  border: 1px solid #ccc;
   height: 38px;
 }
 
 select {
-  width: 150px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
   height: 38px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   background: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-128.png) 96% / 15% no-repeat #eee;
+}
+
+@media only screen and (max-width: 48rem) {
+  select {
+    background: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-128.png) 96% / 10% no-repeat #eee;
+  }
 }

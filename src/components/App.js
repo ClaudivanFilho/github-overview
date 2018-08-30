@@ -57,19 +57,19 @@ export default class App extends Component {
     return (
       <RepositoryContext.Provider value={repProviderValues}>
         <ToastContext.Provider value={toastProviderValues}>
-          <header className="bg-near-white fixed w-100 ph3 pv3 pv3-ns ph4-m ph5-l shadow-3">
-            <nav className="flex items-center f7 fw6 tracked sans-serif">
-              <span className="f5 link purple dib mr3" href="#" title="Home">GitHub Overview</span>
-              <div className="dib h1 br mr3 o-20 b--mid-gray"></div>
-              <Link className="ttu link dim mid-gray dib mr3" to="/">
+          <header className="bg-near-white fixed w-100 ph5 pv3-ns ph4-m ph5-l shadow-3 z-2">
+            <nav className="flex justify-center justify-start-m items-center f7 fw6 tracked sans-serif">
+              <span className="pv4 f5 link purple dib mr5" href="#" title="Home">GitHub Overview</span>
+              <div className="dn dib-m h1 br mr5 o-20 b--mid-gray"></div>
+              <Link className="dn dib-m pa4 ttu link dim mid-gray f6" to="/">
                 Home
               </Link>
-              <Link className="ttu link dim mid-gray dib mr3" to="/repositories">
+              <Link className="dn dib-m flex-m pa4 ttu link dim mid-gray f6" to="/repositories">
                 Repositories
               </Link>
             </nav>
           </header>
-          <div className="pt5">
+          <div className="pt9">
             <ToastContainer />
             <Route exact path="/" component={HomePage} />
             <Route path="/repositories" component={RepositoriesPage} />

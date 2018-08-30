@@ -46,10 +46,13 @@ class OrderBy extends Component {
 
   render() {
     return (
-      <div className="flex items-center">
-        <select id="orderBy" className="pl2 bg-white br2 pointer" onChange={(opt) => {
-          this.doOrdenation(opt.target.value)
-        }}>
+      <div className="flex items-center justify-end w-100 w-auto-m ma2 ma0-m">
+        <select
+          className="w-100 w4-m input-reset pl2 bg-white mid-gray b--silver ba br2 pointer f5"
+          onChange={(opt) => {
+            this.doOrdenation(opt.target.value)
+          }}
+        >
           {options.map(opt => (
             <option key={opt.value} value={opt.value}>
               {opt.name}
