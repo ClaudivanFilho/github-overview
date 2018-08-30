@@ -60,6 +60,10 @@ module.exports = (app) => {
     res.json({ message: 'repository removed successfully.' });
   });
 
+  app.get('/repositories', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  });
+
   /** Main route */
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
